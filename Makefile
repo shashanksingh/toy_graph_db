@@ -7,15 +7,11 @@ install-dev:
 build:
 	docker-compose up
 
-src_package: clean
-	python3 setup.py sdist bdist_wheel
-	echo "Spark job package successfully created!"
-
 test:
 	pytest -sv tests/
 
 black:
-	black --target-version py36 src/ tests/
+	black --target-version py38 src/ tests/
 
 fix:
 	black -l 120 src/ tests/
