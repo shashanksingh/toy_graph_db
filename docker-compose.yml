@@ -1,0 +1,2 @@
+#one nginx to foward proxy requests to our toy db instances
+# load a permanenent volume that all toy db will write and read from
