@@ -41,7 +41,6 @@ class Grid(Graph):
                     size_of_visited = len(self.visited)
         return number_of_components
 
-
     def dfs(self, row, column):
         for row_dv, column_dv in self.direction_vector:
             new_row, new_column = row + row_dv, column + column_dv
@@ -68,5 +67,3 @@ class Grid(Graph):
                             0 <= new_column < self.maximum_column:
                         self.visited.add((new_row, new_column))
                         queue.append((new_row, new_column, new_level))
-
-
