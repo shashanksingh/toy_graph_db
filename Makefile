@@ -4,6 +4,8 @@ install:
 install-dev:
 	PIP_CONFIG_FILE=pip.conf pip install -r requirements-dev.txt
 
+build:
+	docker-compose up
 
 src_package: clean
 	python3 setup.py sdist bdist_wheel
