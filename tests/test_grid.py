@@ -19,8 +19,8 @@ class TestGrid(TestCase):
     def test_dfs(self):
         a = Grid([[1, 1, 1]])
         a.clear_visited()
-        a.dfs(0,0)
-        assert a.visited == {(0,0),(0,1),(0,2)}
+        a.dfs(0, 0)
+        assert a.visited == {(0, 0), (0, 1), (0, 2)}
 
     def test_bfs_with_one_row_grid(self):
         a = Grid([[1, 1, 1]])
@@ -29,7 +29,7 @@ class TestGrid(TestCase):
         assert a.visited == {(0, 0), (0, 1), (0, 2)}
 
     def test_bfs_with_two_row_grid(self):
-        a = Grid([[1, 1, 1],[1, 0, 1]])
+        a = Grid([[1, 1, 1], [1, 0, 1]])
         a.clear_visited()
         a.bfs(0, 0)
         assert a.visited == {(0, 1), (1, 2), (0, 0), (1, 1), (1, 0), (0, 2)}

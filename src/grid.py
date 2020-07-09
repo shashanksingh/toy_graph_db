@@ -44,10 +44,12 @@ class Grid(Graph):
     def dfs(self, row, column):
         for row_dv, column_dv in self.direction_vector:
             new_row, new_column = row + row_dv, column + column_dv
-            if self.grid[row][column] != EMPTY_VALUE and \
-                    (new_row, new_column) not in self.visited and \
-                    0 <= new_row < self.maximum_row and \
-                    0 <= new_column < self.maximum_column:
+            if (
+                self.grid[row][column] != EMPTY_VALUE
+                and (new_row, new_column) not in self.visited
+                and 0 <= new_row < self.maximum_row
+                and 0 <= new_column < self.maximum_column
+            ):
                 self.visited.add((row, column))
                 self.dfs(new_row, new_column)
 
@@ -62,8 +64,10 @@ class Grid(Graph):
                     new_row = row + row_dv
                     new_column = column + column_dv
                     new_level = level + 1
-                    if (new_row, new_column) not in self.visited and \
-                            0 <= new_row < self.maximum_row and \
-                            0 <= new_column < self.maximum_column:
+                    if (
+                        (new_row, new_column) not in self.visited
+                        and 0 <= new_row < self.maximum_row
+                        and 0 <= new_column < self.maximum_column
+                    ):
                         self.visited.add((new_row, new_column))
                         queue.append((new_row, new_column, new_level))
