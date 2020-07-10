@@ -39,6 +39,6 @@ class Dag(Graph):
                 self.ingress_count[connected_node] -= 1
                 if self.ingress_count[connected_node] == 0:
                     no_ingress_node.append(connected_node)
-            if len(topological_sort) != self.number_of_nodes:
-                return [] #no cycles
-            return topological_sort
+        if len(topological_sort) != self.number_of_nodes:
+            return [] #no cycles
+        return topological_sort[::-1]
