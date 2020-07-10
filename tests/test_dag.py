@@ -13,5 +13,5 @@ def test_topological_sort_with_three_nodes():
 
 
 def test_topological_sort_with_four_nodes():
-    dag = Dag(4, [[1,0],[1,2],[1,3]])
+    dag = Dag(4, [[1, 0], [1, 2], [1, 3]])
     assert dag.topological_sort() == [1, 3, 2, 0]
