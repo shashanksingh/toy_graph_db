@@ -30,6 +30,7 @@ class Grid(Graph):
                     size_of_visited = len(self.visited)
         return number_of_components
 
+    # TODO
     def find_connected_components(self) -> List:
         size_of_visited = 0
         number_of_components = 0
@@ -40,6 +41,12 @@ class Grid(Graph):
                     number_of_components += 1
                     size_of_visited = len(self.visited)
         return number_of_components
+
+    # TODO
+    def are_isomorphic(
+        self, component_first: List[List[int]], component_second: List[List[int]]
+    ):
+        pass
 
     def dfs(self, row, column):
         for row_dv, column_dv in self.direction_vector:
