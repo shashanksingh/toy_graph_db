@@ -10,7 +10,7 @@ from typing import List
 class Dag(Graph):
     def __init__(self, number_of_nodes: int, edge_list: List[List[int]]):
         self.adjacency_list = defaultdict(list)
-        self.ingress_count = defaultdict(list)
+        self.ingress_count = defaultdict(int)
         self.number_of_nodes = number_of_nodes
         self.edge_list = edge_list
         # TODO : validation
@@ -21,6 +21,7 @@ class Dag(Graph):
         }
         for edge_from, edge_to in self.edge_list:
             self.adjacency_list[edge_from].append(edge_to)
+            self.ingress_count[edge_to] += 1
 
     def topological_sort(self) -> List:
         topological_sort = []
@@ -39,6 +40,8 @@ class Dag(Graph):
                 self.ingress_count[connected_node] -= 1
                 if self.ingress_count[connected_node] == 0:
                     no_ingress_node.append(connected_node)
+        print(len(topological_sort))
         if len(topological_sort) != self.number_of_nodes:
-            return [] #no cycles
-        return topological_sort[::-1]
+            return [] #cycles
+        else:
+            return topological_sort[::-1]
