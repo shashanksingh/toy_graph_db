@@ -45,4 +45,7 @@ class PersistentDictSingleton(metaclass=SingletonMeta):
 
     def load_from_storage(self, database_name: str, table_name: str) -> object:
         relative_path = f"{database_name}_{table_name}"
-        return self.shelve[relative_path] 
+        return self.shelve[relative_path]
+
+    def close(self):
+        self.shelve.close()

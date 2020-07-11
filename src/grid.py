@@ -15,6 +15,7 @@ class Grid(Graph):
         if valid_direction_vector is None:
             valid_direction_vector = DEFAULT_VALID_DIRECTION_VECTOR
         self.direction_vector = valid_direction_vector
+        super().__init__()
 
     def clear_visited(self):
         self.visited = set()
