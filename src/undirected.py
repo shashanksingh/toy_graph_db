@@ -43,7 +43,8 @@ class Undirected(Graph):
         kids = self.adjacency_list[node]
         for kid in kids:
             if (visited[kid] and kid != parent) or (
-                not visited[kid] and self.__has_cycles_helper(node = kid , visited=visited, parent=node)
+                not visited[kid]
+                and self.__has_cycles_helper(node=kid, visited=visited, parent=node)
             ):
                 return True
 
