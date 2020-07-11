@@ -3,7 +3,9 @@ from typing import List
 from collections import defaultdict, deque
 
 
-def has_cycle_helper(node, visited, ):
+def has_cycle_helper(
+    node, visited,
+):
     visited[node] = True
 
 
@@ -23,25 +25,26 @@ class Undirected(Graph):
             self.adjacency_list[from_edge].append(to_edge)
             self.adjacency_list[to_edge].append(from_edge)
 
-
-    # function-laties
-
+    # source : https://leetcode.com/problems/graph-valid-tree/discuss/382112/easy-peasy-python-solution-comments
     def is_tree(self) -> bool:
         self.setup_adjacency()
         visited = [False] * self.number_of_nodes  # number of nodes
         first_node = 0
-        if self.__has_cycles_helper(first_node, visited, parent = -1):
+        if self.__has_cycles_helper(first_node, visited, parent=-1):
             return False
-        return sum(visited) == self.number_of_nodes # visited all nodes + no cycles is Tree
+        return (
+            sum(visited) == self.number_of_nodes
+        )  # visited all nodes + no cycles is Tree
 
+    # the logic is from https://www.youtube.com/watch?v=vXrv3kruvwE
     def __has_cycles_helper(self, node, visited, parent):
-        pass
+        visited[node] == True
 
+        kids = self.adjacency_list[node]  # aka neighbors
 
-
-    # traversal
-    def bfs_traversal(self) -> List[int]:
-        pass
-
-    def dfs_traversal(self) -> List[int]:
-        pass
+        # if any vertex finds its adjacent vertex with flag 0 ,its a cycle
+        for kid in kids:
+            if (visited[kid]):
+                return True
+            self.__has_cycles_helper(node=kid, visited=visited, parent=node)
+        return False
