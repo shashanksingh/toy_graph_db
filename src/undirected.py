@@ -38,13 +38,13 @@ class Undirected(Graph):
 
     # the logic is from https://www.youtube.com/watch?v=vXrv3kruvwE
     def __has_cycles_helper(self, node, visited, parent):
-        visited[node] == True
+        visited[node] = True
 
-        kids = self.adjacency_list[node]  # aka neighbors
-
-        # if any vertex finds its adjacent vertex with flag 0 ,its a cycle
+        kids = self.adjacency_list[node]
         for kid in kids:
-            if (visited[kid]):
+            if (visited[kid] and kid != parent) or (
+                not visited[kid] and self.__has_cycles_helper(node = kid , visited=visited, parent=node)
+            ):
                 return True
-            self.__has_cycles_helper(node=kid, visited=visited, parent=node)
+
         return False
