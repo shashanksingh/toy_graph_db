@@ -6,7 +6,6 @@ from typing import List
 # Top Sort: https://www.cs.usfca.edu/~galles/visualization/TopoSortDFS.html
 
 
-
 class Dag(Graph):
     def __init__(self, number_of_nodes: int, edge_list: List[List[int]]):
         self.adjacency_list = defaultdict(list)

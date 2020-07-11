@@ -1,4 +1,5 @@
-from .persistentdictsingleton  import PersistentDictSingleton
+from .persistentdictsingleton import PersistentDictSingleton
+
 
 class Graph:
     def __init__(self):
@@ -10,5 +11,3 @@ class Graph:
 
     def __str__(self) -> str:
         return f"{self.get_class_name()} : {self.__hash__()}"
-
-

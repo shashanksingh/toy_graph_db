@@ -11,6 +11,7 @@ import shelve
 # so to write, you have to get a lock
 # all graph objects would be just Persistant dict key object
 
+
 class SingletonMeta(type):
     """
     The Singleton class can be implemented in different ways in Python. Some
@@ -36,7 +37,7 @@ class PersistentDictSingleton(metaclass=SingletonMeta):
         pass
 
     def save_into_storage(
-            self, database_name: str, table_name: str, object_to_be_stored: object
+        self, database_name: str, table_name: str, object_to_be_stored: object
     ) -> bool:
         relative_path = f"{database_name}_{table_name}"
         with open(relative_path, "wb") as f:

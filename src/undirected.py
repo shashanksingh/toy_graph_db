@@ -25,7 +25,7 @@ class Undirected(Graph):
 
     def has_cycles(self) -> bool:
         queue = deque()
-        count_of_visited_verticies = 0
+        count_of_visited_vertices = 0
 
         for item, value in self.ingress_count.items():
             if value == 0:
@@ -37,8 +37,8 @@ class Undirected(Graph):
                 self.ingress_count[to_edge] -= 1
                 if self.ingress_count[to_edge] == 0:
                     queue.append(to_edge)
-            count_of_visited_verticies += 1
-        return not (count_of_visited_verticies == self.number_of_nodes)  # True if cycle
+            count_of_visited_vertices += 1
+        return not (count_of_visited_vertices == self.number_of_nodes)  # True if cycle
 
     # traversal
     def bfs_traversal(self) -> List[int]:
