@@ -23,5 +23,8 @@ fix:
 clean:
 	rm -rf dist/ build/  || true
 
+run:
+	cd src && python main.py
+
 .PHONY: freeze clean
 .SILENT: src_package
