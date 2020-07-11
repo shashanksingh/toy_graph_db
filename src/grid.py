@@ -1,6 +1,7 @@
 from typing import List, Tuple
 from collections import deque
 from .graph import Graph
+from hashlib import md5
 
 EMPTY_VALUE = 0
 DEFAULT_VALID_DIRECTION_VECTOR = [(1, 0), (0, 1), (-1, 0), (0, -1)]  # all 4 directions
@@ -16,6 +17,9 @@ class Grid(Graph):
             valid_direction_vector = DEFAULT_VALID_DIRECTION_VECTOR
         self.direction_vector = valid_direction_vector
         super()
+
+    def __hash__(self):
+        return md5((self.get_class_name() + "").encode("utf-8")).hexdigest()
 
     def clear_visited(self):
         self.visited = set()
