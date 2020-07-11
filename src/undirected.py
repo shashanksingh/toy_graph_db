@@ -12,6 +12,7 @@ class Undirected(Graph):
 
     def add_edge(self, from_edge: int, to_edge: int):
         self.adjacency_list[from_edge].append(to_edge)
+        self.adjacency_list[to_edge].append(from_edge)
 
     def setup_adjacency(self):
         self.adjacency_list = {x: [] for x in range(self.number_of_nodes)}
