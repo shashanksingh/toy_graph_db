@@ -1,4 +1,5 @@
 from .persistentdictsingleton import PersistentDictSingleton
+from abc import ABC
 
 DATABASE_NAME = "GRAPH"
 

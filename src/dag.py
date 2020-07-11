@@ -1,7 +1,7 @@
 from .graph import Graph
 from collections import defaultdict
 from typing import List
-
+import hashlib
 # Top Sort: https://www.youtube.com/watch?v=dis_c84ejhQ
 # Top Sort: https://www.cs.usfca.edu/~galles/visualization/TopoSortDFS.html
 
@@ -15,8 +15,12 @@ class Dag(Graph):
         super()
         # TODO : validation
 
+    def __hash__(self):
+        return hashlib.md5((self.get_class_name()+"").encode('utf-8') )
+
     def add_edge(self, from_edge: int, to_edge: int):
         self.adjacency_list[from_edge].append(to_edge)
+
 
     def setup_adjacency_list(self):
         self.adjacency_list = {

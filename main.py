@@ -10,7 +10,7 @@ b = Dag(2, [[0, 1]])
 c = Grid([[1, 0, 1]])
 d = Graph()
 
-print(a.has_cycles())
+print(a.is_tree())
 print(b.topological_sort())
 print(c.count_of_connected_components())
 print()
