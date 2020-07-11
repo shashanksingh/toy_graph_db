@@ -9,8 +9,8 @@ class Undirected(Graph):
         self.number_of_nodes = number_of_nodes
         self.adjacency_list = defaultdict(list)
         self.ingress_count = defaultdict(int)
-        super().__init__()
-        
+        super()
+
     def add_edge(self, from_edge: int, to_edge: int):
         self.adjacency_list[from_edge].append(to_edge)
 
@@ -20,6 +20,7 @@ class Undirected(Graph):
             self.adjacency_list[from_edge] = to_edge
             self.ingress_count[to_edge] += 1
         # self.sh
+
     # function-laties
     def is_it_a_valid_tree(self) -> bool:
         return not self.has_cycles()

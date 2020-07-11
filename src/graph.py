@@ -2,18 +2,29 @@ from .persistentdictsingleton import PersistentDictSingleton
 
 DATABASE_NAME = "GRAPH"
 
+
 class Graph:
+
+    # constructor
     def __init__(self):
-        self.storage = PersistentDictSingleton()
+        # self.storage = PersistentDictSingleton()
+        pass
+
+    # desctructor
+    def __del__(self):
+        storage = PersistentDictSingleton()
+        storage.close()
 
     def save_into_storage(self):
-        database_name = DATABASE_NAME, table_name = self.__hash__()
-        self.storage.save_into_storage(database_name, table_name, self)
+        storage = PersistentDictSingleton()
+        database_name, table_name = DATABASE_NAME, self.__hash__()
+        storage.save_into_storage(database_name, table_name, self)
 
-    #TODO
+    # TODO
     def load_from_storage(self):
+        storage = PersistentDictSingleton()
         database_name = DATABASE_NAME, table_name = self.__hash__()
-        self.storage.load_from_storage(database_name, table_name, self)
+        storage.load_from_storage(database_name, table_name, self)
 
     @classmethod
     def get_class_name(cls) -> str:

@@ -14,5 +14,7 @@ print(b.topological_sort())
 print(c.count_of_connected_components())
 print(a)
 
-a.storage.save_into_storage()
+a.save_into_storage()
+b.save_into_storage()
+c.save_into_storage()
 # needs to have a RPC server to load/create/read/run_functions/write objects when needs

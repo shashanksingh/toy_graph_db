@@ -12,7 +12,7 @@ class Dag(Graph):
         self.ingress_count = defaultdict(int)
         self.number_of_nodes = number_of_nodes
         self.edge_list = edge_list
-        super().__init__()
+        super()
         # TODO : validation
 
     def add_edge(self, from_edge: int, to_edge: int):
