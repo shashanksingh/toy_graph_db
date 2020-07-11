@@ -19,11 +19,10 @@ class Grid(Graph):
         super()
 
     def __hash__(self):
-        return md5((self.get_class_name()+"").encode('utf-8') )
+        return md5((self.get_class_name() + "").encode("utf-8")).hexdigest()
 
     def clear_visited(self):
         self.visited = set()
-
 
     def count_of_connected_components(self) -> int:
         size_of_visited = 0
