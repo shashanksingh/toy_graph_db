@@ -3,16 +3,17 @@
 from src.undirected import Undirected
 from src.dag import Dag
 from src.grid import Grid
-
+from src.graph import Graph
 
 a = Undirected(2, [[0, 1]])
 b = Dag(2, [[0, 1]])
 c = Grid([[1, 0, 1]])
+d = Graph()
 
 print(a.has_cycles())
 print(b.topological_sort())
 print(c.count_of_connected_components())
-print(a)
+print()
 
 a.save_into_storage()
 b.save_into_storage()

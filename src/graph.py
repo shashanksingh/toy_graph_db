@@ -7,10 +7,9 @@ class Graph:
 
     # constructor
     def __init__(self):
-        # self.storage = PersistentDictSingleton()
         pass
 
-    # desctructor
+    # destructor
     def __del__(self):
         storage = PersistentDictSingleton()
         storage.close()
@@ -23,7 +22,7 @@ class Graph:
     # TODO
     def load_from_storage(self):
         storage = PersistentDictSingleton()
-        database_name = DATABASE_NAME, table_name = self.__hash__()
+        database_name, table_name = DATABASE_NAME, self.__hash__()
         storage.load_from_storage(database_name, table_name, self)
 
     @classmethod

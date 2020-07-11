@@ -3,12 +3,15 @@ from typing import List
 from collections import defaultdict, deque
 
 
+def has_cycle_helper(node, visited, ):
+    visited[node] = True
+
+
 class Undirected(Graph):
     def __init__(self, number_of_nodes: int, edge_list: List[List[int]]):
         self.edge_list = edge_list
         self.number_of_nodes = number_of_nodes
         self.adjacency_list = defaultdict(list)
-        self.ingress_count = defaultdict(int)
         super()
 
     def add_edge(self, from_edge: int, to_edge: int):
@@ -17,33 +20,24 @@ class Undirected(Graph):
     def setup_adjacency(self):
         self.adjacency_list = {x: [] for x in range(self.number_of_nodes)}
         for from_edge, to_edge in self.edge_list:
-            self.adjacency_list[from_edge] = to_edge
-            self.ingress_count[to_edge] += 1
-        # self.sh
+            self.adjacency_list[from_edge].append(to_edge)
+            self.adjacency_list[to_edge].append(from_edge)
+
 
     # function-laties
-    def is_it_a_valid_tree(self) -> bool:
-        return not self.has_cycles()
 
-    def has_cycles(self) -> bool:
+    def is_tree(self) -> bool:
         self.setup_adjacency()
+        visited = [False] * self.number_of_nodes  # number of nodes
+        first_node = 0
+        if self.__has_cycles_helper(first_node, visited, parent = -1):
+            return False
+        return sum(visited) == self.number_of_nodes # visited all nodes + no cycles is Tree
 
-        queue = deque()
-        count_of_visited_vertices = 0
+    def __has_cycles_helper(self, node, visited, parent):
+        pass
 
-        for item, value in self.adjacency_list.items():
-            if not value:
-                queue.append(item)
 
-        while queue:
-            node = queue.pop()
-            for to_edge in self.adjacency_list[node]:
-                self.ingress_count[to_edge] -= 1
-                if self.ingress_count[to_edge] == 0:
-                    queue.append(to_edge)
-            count_of_visited_vertices += 1
-        print(count_of_visited_vertices)
-        return not (count_of_visited_vertices == self.number_of_nodes)  # True if cycle
 
     # traversal
     def bfs_traversal(self) -> List[int]:
