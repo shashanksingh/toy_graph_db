@@ -35,7 +35,7 @@ class Undirected(Graph):
         if self.__has_cycles(first_node, visited, parent=-1):
             return False
         return (
-                sum(visited) == self.number_of_nodes
+            sum(visited) == self.number_of_nodes
         )  # visited all nodes + no cycles is Tree
 
     # the logic is from https://www.youtube.com/watch?v=vXrv3kruvwE
@@ -45,8 +45,8 @@ class Undirected(Graph):
         kids = self.adjacency_list[node]
         for kid in kids:
             if (visited[kid] and kid != parent) or (
-                    not visited[kid]
-                    and self.__has_cycles(node=kid, visited=visited, parent=node)
+                not visited[kid]
+                and self.__has_cycles(node=kid, visited=visited, parent=node)
             ):
                 return True
         return False

@@ -18,4 +18,5 @@ print()
 a.save_into_storage()
 b.save_into_storage()
 c.save_into_storage()
+print(d.list_all())
 # needs to have a RPC server to load/create/read/run_functions/write objects when needs

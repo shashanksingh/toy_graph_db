@@ -41,11 +41,15 @@ class PersistentDictSingleton(metaclass=SingletonMeta):
         self, database_name: str, table_name: str, object_to_be_stored: object
     ) -> bool:
         relative_path = f"{database_name}_{table_name}"
-        self.shelve[relative_path] = object
+        self.shelve[relative_path] = object_to_be_stored
 
     def load_from_storage(self, database_name: str, table_name: str) -> object:
         relative_path = f"{database_name}_{table_name}"
         return self.shelve[relative_path]
+
+    # TODO : doesnt work , should work though https://stackoverflow.com/a/54667683
+    def list_all(self) -> object:
+        return [key for key in self.shelve.keys()]
 
     def close(self):
         self.shelve.close()

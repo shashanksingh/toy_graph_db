@@ -28,7 +28,11 @@ class Graph:
         storage = PersistentDictSingleton()
         database_name, table_name = DATABASE_NAME, self.__hash__()
         storage.load_from_storage(database_name, table_name, self)
-    
+
+    def list_all(self):
+        storage = PersistentDictSingleton()
+        storage.list_all()
+
     @classmethod
     def get_class_name(cls) -> str:
         return cls.__name__

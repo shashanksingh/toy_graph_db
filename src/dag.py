@@ -54,4 +54,3 @@ class Dag(Graph):
 
     def is_topological_sort_possible(self):
         return self.topological_sort() != []
-
