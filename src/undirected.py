@@ -3,12 +3,6 @@ from typing import List
 from collections import defaultdict, deque
 
 
-def has_cycle_helper(
-    node, visited,
-):
-    visited[node] = True
-
-
 class Undirected(Graph):
     def __init__(self, number_of_nodes: int, edge_list: List[List[int]]):
         self.edge_list = edge_list
@@ -25,6 +19,9 @@ class Undirected(Graph):
             self.adjacency_list[from_edge].append(to_edge)
             self.adjacency_list[to_edge].append(from_edge)
 
+    def number_of_components(self):
+        pass
+
     # source : https://leetcode.com/problems/graph-valid-tree/discuss/382112/easy-peasy-python-solution-comments
     def is_tree(self) -> bool:
         self.setup_adjacency()
@@ -37,7 +34,7 @@ class Undirected(Graph):
         )  # visited all nodes + no cycles is Tree
 
     # the logic is from https://www.youtube.com/watch?v=vXrv3kruvwE
-    def __has_cycles(self, node, visited, parent):
+    def __has_cycles(self, node, visited, parent) -> bool:
         visited[node] = True
 
         kids = self.adjacency_list[node]
@@ -47,5 +44,4 @@ class Undirected(Graph):
                 and self.__has_cycles(node=kid, visited=visited, parent=node)
             ):
                 return True
-
         return False
