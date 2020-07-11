@@ -30,21 +30,21 @@ class Undirected(Graph):
         self.setup_adjacency()
         visited = [False] * self.number_of_nodes  # number of nodes
         first_node = 0
-        if self.__has_cycles_helper(first_node, visited, parent=-1):
+        if self.__has_cycles(first_node, visited, parent=-1):
             return False
         return (
             sum(visited) == self.number_of_nodes
         )  # visited all nodes + no cycles is Tree
 
     # the logic is from https://www.youtube.com/watch?v=vXrv3kruvwE
-    def __has_cycles_helper(self, node, visited, parent):
+    def __has_cycles(self, node, visited, parent):
         visited[node] = True
 
         kids = self.adjacency_list[node]
         for kid in kids:
             if (visited[kid] and kid != parent) or (
                 not visited[kid]
-                and self.__has_cycles_helper(node=kid, visited=visited, parent=node)
+                and self.__has_cycles(node=kid, visited=visited, parent=node)
             ):
                 return True
 
