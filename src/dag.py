@@ -1,10 +1,10 @@
-from .graph import Graph
+from graph import Graph
+from collections import defaultdict
+from typing import List
 
 # Top Sort: https://www.youtube.com/watch?v=dis_c84ejhQ
 # Top Sort: https://www.cs.usfca.edu/~galles/visualization/TopoSortDFS.html
 
-from collections import defaultdict
-from typing import List
 
 
 class Dag(Graph):

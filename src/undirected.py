@@ -1,4 +1,4 @@
-from .graph import Graph
+from graph import Graph
 from typing import List
 from collections import defaultdict, deque
 
