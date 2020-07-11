@@ -31,7 +31,7 @@ class Graph:
 
     def list_all(self):
         storage = PersistentDictSingleton()
-        storage.list_all()
+        return storage.list_all()
 
     @classmethod
     def get_class_name(cls) -> str:
