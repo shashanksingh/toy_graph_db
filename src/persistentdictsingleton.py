@@ -1,6 +1,7 @@
 import pickle
 import shelve
 
+FILE_NAME_OF_DB = "WHERE_THE_DOGS_SLEEP"
 
 # the ability to create
 # https://docs.python.org/3/library/pickle.html
@@ -34,16 +35,14 @@ class SingletonMeta(type):
 
 class PersistentDictSingleton(metaclass=SingletonMeta):
     def __init__(self):
-        pass
+        self.shelve = shelve.open(FILE_NAME_OF_DB)
 
     def save_into_storage(
         self, database_name: str, table_name: str, object_to_be_stored: object
     ) -> bool:
         relative_path = f"{database_name}_{table_name}"
-        with open(relative_path, "wb") as f:
-            pickle.dump(object_to_be_stored, f, pickle.HIGHEST_PROTOCOL)
+        self.shelve[relative_path] = object
 
     def load_from_storage(self, database_name: str, table_name: str) -> object:
         relative_path = f"{database_name}_{table_name}"
-        with open(relative_path, "rb") as f:
-            data = pickle.load(f)
+        return self.shelve[relative_path] 
