@@ -49,7 +49,7 @@ class PersistentDictSingleton(metaclass=SingletonMeta):
 
     # TODO : doesnt work , should work though https://stackoverflow.com/a/54667683
     def list_all(self) -> object:
-        return [value for key,value in self.shelve.items()]
+        return [value for key, value in self.shelve.items()]
 
     def close(self):
         self.shelve.close()
