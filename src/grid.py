@@ -1,6 +1,6 @@
 from typing import List, Tuple
 from collections import deque
-from graph import Graph
+from .graph import Graph
 
 EMPTY_VALUE = 0
 DEFAULT_VALID_DIRECTION_VECTOR = [(1, 0), (0, 1), (-1, 0), (0, -1)]  # all 4 directions
