@@ -1,6 +1,7 @@
 from .graph import Graph
 from typing import List
 from collections import defaultdict, deque
+from hashlib import md5
 
 
 class Undirected(Graph):
@@ -9,6 +10,9 @@ class Undirected(Graph):
         self.number_of_nodes = number_of_nodes
         self.adjacency_list = defaultdict(list)
         super()
+
+    def __hash__(self):
+        return md5((self.get_class_name()+"").encode('utf-8') )
 
     def add_edge(self, from_edge: int, to_edge: int):
         self.adjacency_list[from_edge].append(to_edge)
