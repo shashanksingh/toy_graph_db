@@ -19,16 +19,18 @@ class Undirected(Graph):
             self.adjacency_list[from_edge] = to_edge
             self.ingress_count[to_edge] += 1
 
-    # functionlaties
+    # function-laties
     def is_it_a_valid_tree(self) -> bool:
         return not self.has_cycles()
 
     def has_cycles(self) -> bool:
+        self.setup_adjacency()
+
         queue = deque()
         count_of_visited_vertices = 0
 
-        for item, value in self.ingress_count.items():
-            if value == 0:
+        for item, value in self.adjacency_list.items():
+            if not value:
                 queue.append(item)
 
         while queue:
@@ -38,6 +40,7 @@ class Undirected(Graph):
                 if self.ingress_count[to_edge] == 0:
                     queue.append(to_edge)
             count_of_visited_vertices += 1
+        print(count_of_visited_vertices)
         return not (count_of_visited_vertices == self.number_of_nodes)  # True if cycle
 
     # traversal
