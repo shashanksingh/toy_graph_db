@@ -4,6 +4,7 @@ install:
 install-dev:
 	PIP_CONFIG_FILE=pip.conf pip install -r requirements-dev.txt
 
+#TODO
 proto:
 	python -m grpc_tools.protoc  --proto_path=src/proto src/proto/*.proto -o src/proto/generated/basic.py
 
