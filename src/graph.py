@@ -33,6 +33,15 @@ class Graph:
         storage = PersistentDictSingleton()
         return storage.list_all()
 
+    def find(self):
+        pass
+
+    def filter(self):
+        pass
+
+    def remove(self):
+        pass
+
     @classmethod
     def get_class_name(cls) -> str:
         return cls.__name__
