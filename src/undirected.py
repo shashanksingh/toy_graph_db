@@ -12,14 +12,11 @@ class Undirected(Graph):
         self.edge_list = edge_list
         self.number_of_nodes = number_of_nodes
         self.adjacency_list = defaultdict(list)
+        self.setup_adjacency()
         super()
 
     def __hash__(self):
         return self.get_class_name() + md5(("").encode("utf-8")).hexdigest()
-
-    def add_edge(self, from_edge: int, to_edge: int):
-        self.adjacency_list[from_edge].append(to_edge)
-        self.adjacency_list[to_edge].append(from_edge)
 
     def setup_adjacency(self):
         self.adjacency_list = {x: [] for x in range(self.number_of_nodes)}
@@ -27,8 +24,23 @@ class Undirected(Graph):
             self.adjacency_list[from_edge].append(to_edge)
             self.adjacency_list[to_edge].append(from_edge)
 
-    def number_of_components(self):
-        pass
+    def add_edge(self, from_edge: int, to_edge: int):
+        self.adjacency_list[from_edge].append(to_edge)
+        self.adjacency_list[to_edge].append(from_edge)
+
+    def number_of_components(self) -> int:
+
+        if len(self.edge_list) == 0:
+            return self.number_of_nodes
+
+        visited = set()
+        number_of_components = 0
+
+        for node in range(self.number_of_nodes):
+            if node not in visited:
+                number_of_components += 1
+                self.__dfs(node=node, visited=visited)
+        return number_of_components
 
     def find_roots_of_minimum_height_tree(self):
         return self.find_center()
@@ -74,6 +86,7 @@ class Undirected(Graph):
     # source : https://leetcode.com/problems/graph-valid-tree/discuss/382112/easy-peasy-python-solution-comments
     def is_tree(self) -> bool:
         self.setup_adjacency()
+
         visited = [False] * self.number_of_nodes  # number of nodes
         first_node = 0
         if self.__has_cycles(first_node, visited, parent=-1):
@@ -94,3 +107,10 @@ class Undirected(Graph):
             ):
                 return True
         return False
+
+    def __dfs(self, node, visited, dfs_path: str = "") -> List[int]:
+        visited.add(node)
+        for kid in self.adjacency_list[node]:
+            if kid not in visited:
+                dfs_path += self.__dfs(node=kid, visited=visited, dfs_path=dfs_path)
+        return dfs_path
