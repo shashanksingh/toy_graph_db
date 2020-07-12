@@ -27,6 +27,14 @@ class Undirected(Graph):
     def number_of_components(self):
         pass
 
+    def find_roots_of_minimum_height_tree(self):
+        return self.find_center()
+
+    def find_center(self) -> List[int]:
+        if not self.is_tree():
+            return []
+
+
     # source : https://leetcode.com/problems/graph-valid-tree/discuss/382112/easy-peasy-python-solution-comments
     def is_tree(self) -> bool:
         self.setup_adjacency()
