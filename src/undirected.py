@@ -35,7 +35,7 @@ class Undirected(Graph):
 
     # source : https://www.youtube.com/watch?v=nzF_9bjDzdc
     def find_center(self) -> List[int]:
-        if not self.is_tree():
+        if self.is_tree():
             return []
         if self.number_of_nodes == 1:
             return [0]
@@ -54,7 +54,10 @@ class Undirected(Graph):
         ]
 
         count_of_nodes_touches = 0
-        while count_of_nodes_touches < self.number_of_nodes - MAXIMUM_NUMBER_OF_NODES_THAT_CAN_BE_CENTER:
+        while (
+            count_of_nodes_touches
+            < self.number_of_nodes - MAXIMUM_NUMBER_OF_NODES_THAT_CAN_BE_CENTER
+        ):
             # go through all leaves
             # peel them and make ingress for their neibour/kids -= 1
             inner_layer_of_leave = []
