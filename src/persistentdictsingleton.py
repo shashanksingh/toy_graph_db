@@ -47,9 +47,9 @@ class PersistentDictSingleton(metaclass=SingletonMeta):
         relative_path = f"{database_name}_{table_name}"
         return self.shelve[relative_path]
 
-    # TODO : doesnt work , should work though https://stackoverflow.com/a/54667683
+    # https://stackoverflow.com/a/54667683
     def list_all(self) -> object:
-        return [value for key,value in self.shelve.items()]
+        return [value for key, value in self.shelve.items()]
 
     def close(self):
         self.shelve.close()
