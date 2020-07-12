@@ -24,3 +24,13 @@ def test_find_center_with_5_nodes():
 def test_find_center_with_6_nodes():
     graph = Undirected(6, [[0, 3], [1, 3], [2, 3], [4, 3], [5, 4]])
     assert graph.find_center() == [3, 4]
+
+
+def test_number_of_components_with_5_nodes():
+    graph = Undirected(5, [[0, 1], [1, 2], [3, 4]])
+    assert graph.number_of_components() == 2
+
+
+def test_number_of_components_with_1_node():
+    graph = Undirected(1, [])
+    assert graph.number_of_components() == 1
