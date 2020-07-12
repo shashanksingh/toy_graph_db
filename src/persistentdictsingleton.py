@@ -1,5 +1,5 @@
-import pickle
 import shelve
+from typing import List
 
 FILE_NAME_OF_DB = "WHERE_THE_DOGS_SLEEP"
 
@@ -48,7 +48,7 @@ class PersistentDictSingleton(metaclass=SingletonMeta):
         return self.shelve[relative_path]
 
     # https://stackoverflow.com/a/54667683
-    def list_all(self) -> object:
+    def list_all(self) -> List[object]:
         return [value for key, value in self.shelve.items()]
 
     def close(self):
