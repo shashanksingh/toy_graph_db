@@ -33,6 +33,7 @@ class Graph:
         storage = PersistentDictSingleton()
         return storage.list_all()
 
+
     def find(self):
         pass
 
