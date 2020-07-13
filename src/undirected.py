@@ -1,5 +1,5 @@
 from .graph import Graph
-from typing import List
+from typing import List, Set
 from collections import defaultdict, deque
 from hashlib import md5
 
@@ -29,7 +29,6 @@ class Undirected(Graph):
         self.adjacency_list[to_edge].append(from_edge)
 
     def number_of_components(self) -> int:
-
         if len(self.edge_list) == 0:
             return self.number_of_nodes
 
@@ -39,8 +38,22 @@ class Undirected(Graph):
         for node in range(self.number_of_nodes):
             if node not in visited:
                 number_of_components += 1
-                self.__dfs(node=node, visited=visited)
+                a = self.__dfs(node=node, visited=visited)
+                print(a)
         return number_of_components
+
+    def find_components(self) -> int:
+        if len(self.edge_list) == 0:
+            return self.number_of_nodes
+
+        visited = set()
+        list_of_components = []
+        for node in range(self.number_of_nodes):
+            path = []
+            if node not in visited:
+                self.__dfs(node=node, visited=visited, path=path)
+                list_of_components.append(path)
+        return list_of_components
 
     def find_roots_of_minimum_height_tree(self):
         return self.find_center()
@@ -108,9 +121,9 @@ class Undirected(Graph):
                 return True
         return False
 
-    def __dfs(self, node, visited, dfs_path: str = "") -> List[int]:
+    def __dfs(self, node: int, visited: Set, path: List) -> List[int]:
         visited.add(node)
+        path.append(node)
         for kid in self.adjacency_list[node]:
             if kid not in visited:
-                dfs_path += self.__dfs(node=kid, visited=visited, dfs_path=dfs_path)
-        return dfs_path
+                self.__dfs(node=kid, visited=visited, path=path)
