@@ -38,7 +38,7 @@ class Undirected(Graph):
         for node in range(self.number_of_nodes):
             if node not in visited:
                 number_of_components += 1
-                a = self.__dfs(node=node, visited=visited)
+                a = self.__dfs(node=node, visited=visited, path=[])
                 print(a)
         return number_of_components
 
