@@ -11,9 +11,9 @@ class Graph:
         pass
 
     # destructor
-    def __del__(self):
-        storage = PersistentDictSingleton()
-        storage.close()
+    # def __del__(self):
+    #     storage = PersistentDictSingleton()
+    #     storage.close()
 
     def __str__(self) -> str:
         return f"{self.get_class_name()} : {self.__hash__()}"
