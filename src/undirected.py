@@ -121,7 +121,7 @@ class Undirected(Graph):
                 return True
         return False
 
-    def __dfs(self, node: int, visited: Set, path: List) -> List[int]:
+    def __dfs(self, node: int, visited: Set, path: List):
         visited.add(node)
         path.append(node)
         for kid in self.adjacency_list[node]:
