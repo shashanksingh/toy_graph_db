@@ -36,6 +36,6 @@ def test_number_of_components_with_1_node():
     assert graph.number_of_components() == 1
 
 
-def test_find_components():
+def test_find_components_with_5_nodes():
     graph = Undirected(5, [[0, 1], [1, 2], [3, 4]])
     assert graph.find_components() == [[0, 1, 2], [3, 4]]
