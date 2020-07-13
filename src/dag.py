@@ -1,4 +1,4 @@
-from .graph import Graph
+from src.directed import Directed
 from collections import defaultdict
 from typing import List
 from hashlib import md5
@@ -7,7 +7,7 @@ from hashlib import md5
 # Top Sort: https://www.cs.usfca.edu/~galles/visualization/TopoSortDFS.html
 
 
-class Dag(Graph):
+class Dag(Directed):
     def __init__(self, number_of_nodes: int, edge_list: List[List[int]]):
         self.adjacency_list = defaultdict(list)
         self.ingress_count = defaultdict(int)
