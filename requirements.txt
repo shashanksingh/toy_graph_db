@@ -13,10 +13,12 @@ pathspec==0.8.0
 pluggy==0.13.1
 protobuf==3.12.2
 py==1.9.0
+py-cpuinfo==7.0.0
 pycodestyle==2.6.0
 pyflakes==2.2.0
 pyparsing==2.4.7
 pytest==5.4.3
+pytest-benchmark==3.2.3
 regex==2020.6.8
 six==1.15.0
 toml==0.10.1
