@@ -15,8 +15,8 @@ that has to get X% over money over what I started.
 
 Writing
 
-| Name (time in us)                                  	| Min     	| Max      	| Mean    	| OPS (Kops/s) 	|
-|----------------------------------------------------	|---------	|----------	|---------	|--------------	|
-| test_performance_of_saving_all_graphs_into_storage 	| 46.5050 	| 132.3730 	| 49.8334 	| 20.0669      	|
+|                  Name (time in us)                 	|   Min   	|    Max   	|   Mean  	| OPS (Kops/s) 	|
+|:--------------------------------------------------:	|:-------:	|:--------:	|:-------:	|:------------:	|
+| test_performance_of_saving_all_graphs_into_storage 	| 46.5050 	| 132.3730 	| 49.8334 	|    20.0669   	|
 |                                                    	|         	|          	|         	|              	|
 |                                                    	|         	|          	|         	|              	|
