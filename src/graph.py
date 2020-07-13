@@ -23,7 +23,7 @@ class Graph:
         database_name, table_name = DATABASE_NAME, self.__hash__()
         storage.save_into_storage(database_name, table_name, self)
 
-    # TODO
+    # TODO : Load based on what ?
     def load_from_storage(self):
         storage = PersistentDictSingleton()
         database_name, table_name = DATABASE_NAME, self.__hash__()

@@ -8,7 +8,7 @@ class Tree(Undirected):
     def __init__(self, number_of_nodes: int, edge_list: List[List[int]]):
         super(number_of_nodes=number_of_nodes, edge_list=edge_list)
 
-    # Tree by 'definition' dont hav cycles so no components
+    # Tree by 'definition' don't hav cycles so no components
     def find_components(self) -> int:
         return 0
 
