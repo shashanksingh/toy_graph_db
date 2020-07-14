@@ -1,3 +1,26 @@
 1. Read a Graph
 2. Create a Graph with table_name
 3. Call a functinality on graph like Undirected.is_tree()
+
+
+
+Service Defination:
+
+service ToyGraphDB {
+
+  rpc readGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {}
+
+  rpc createGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {}
+  
+  rpc CallFunctionalityInGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {}
+}
+
+// The request message containing the user's name.
+message ToyGraphDBRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message ToyGraphDBResponse {
+  string message = 1;
+}
