@@ -13,7 +13,7 @@ class Dag(Directed):
         self.ingress_count = defaultdict(int)
         self.number_of_nodes = number_of_nodes
         self.edge_list = edge_list
-        super()
+        super().__init__(number_of_nodes=number_of_nodes, edge_list=edge_list)
         # TODO : validation
 
     def __hash__(self):
