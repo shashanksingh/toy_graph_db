@@ -1,4 +1,4 @@
-1. Read a Graph
+1. Read a Graph - by database name > table name
 2. Create a Graph with table_name
 3. Call a functinality on graph like Undirected.is_tree()
 
@@ -18,10 +18,25 @@ service ToyGraphDB {
 // The request message containing the user's name.
 message ToyGraphDBRequest {
   string type = 1;
-  
-
-  string 
+  dag dag = 2;
+  directed directed = 3;
+  graph graph = 4;
+  grid grid = 5;
+  tree tree = 6;
+  trie trie = 7;
+  undirected undirected = 8;
+  string message = 9;
+  string database = 10;
+  string table = 11;
 }
+
+message dag {}
+message directed {}
+message graph {}
+message grid {}
+message tree {}
+message trie {}
+message undirected {}
 
 // The response message containing the greetings
 message ToyGraphDBResponse {
