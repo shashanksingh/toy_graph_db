@@ -8,12 +8,12 @@ from hashlib import md5
 
 
 class Dag(Directed):
-    def __init__(self, number_of_nodes: int, edge_list: List[List[int]]):
+    def __init__(self, number_of_nodes: int, edges: List[List[int]]):
         self.adjacency_list = defaultdict(list)
         self.ingress_count = defaultdict(int)
         self.number_of_nodes = number_of_nodes
-        self.edge_list = edge_list
-        super().__init__(number_of_nodes=number_of_nodes, edge_list=edge_list)
+        self.edge_list = edges
+        super().__init__(number_of_nodes=number_of_nodes, edges=edges)
         # TODO : validation
 
     def __hash__(self):
