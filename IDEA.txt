@@ -1,4 +1,5 @@
 1. Read a Graph - by database name > table name
+2. Eventually Filter - by data, or result ? Good to have
 2. Create a Graph with table_name
 3. Call a functinality on graph like Undirected.is_tree()
 
