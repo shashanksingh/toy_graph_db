@@ -30,6 +30,9 @@ class Dag(Directed):
             self.adjacency_list[edge_from].append(edge_to)
             self.ingress_count[edge_to] += 1
 
+    # Time Complexity: O(∣E∣+∣V∣)
+    # Space Complexity: O(|E|+|V|)
+    # https://www.youtube.com/watch?v=eL-KzMXSXXI
     def topological_sort(self) -> List:
         topological_sort = []
         self.setup_adjacency_list()
