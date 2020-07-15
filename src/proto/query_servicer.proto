@@ -2,11 +2,11 @@ syntax = "proto3";
 
 service ToyGraphDB {
 
-  rpc readGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {}
+  rpc readGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // Obtains the graph in question
 
-  rpc createGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {}
+  rpc createGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // create a graph based on params
 
-  rpc CallFunctionalityInGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {}
+  rpc CallFunctionalityInGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // Calls functions on the graph in question
 }
 
 message ToyGraphDBRequest {
