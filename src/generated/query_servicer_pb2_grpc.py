@@ -15,20 +15,20 @@ class ToyGraphDBStub(object):
             channel: A grpc.Channel.
         """
         self.readGraph = channel.unary_unary(
-            "/ToyGraphDB/readGraph",
-            request_serializer=query__servicer__pb2.ToyGraphDBRequest.SerializeToString,
-            response_deserializer=query__servicer__pb2.ToyGraphDBResponse.FromString,
-        )
+                '/ToyGraphDB/readGraph',
+                request_serializer=query__servicer__pb2.ToyGraphDBRequest.SerializeToString,
+                response_deserializer=query__servicer__pb2.ToyGraphDBResponse.FromString,
+                )
         self.createGraph = channel.unary_unary(
-            "/ToyGraphDB/createGraph",
-            request_serializer=query__servicer__pb2.ToyGraphDBRequest.SerializeToString,
-            response_deserializer=query__servicer__pb2.ToyGraphDBResponse.FromString,
-        )
+                '/ToyGraphDB/createGraph',
+                request_serializer=query__servicer__pb2.ToyGraphDBRequest.SerializeToString,
+                response_deserializer=query__servicer__pb2.ToyGraphDBResponse.FromString,
+                )
         self.CallFunctionalityInGraph = channel.unary_unary(
-            "/ToyGraphDB/CallFunctionalityInGraph",
-            request_serializer=query__servicer__pb2.ToyGraphDBRequest.SerializeToString,
-            response_deserializer=query__servicer__pb2.ToyGraphDBResponse.FromString,
-        )
+                '/ToyGraphDB/CallFunctionalityInGraph',
+                request_serializer=query__servicer__pb2.ToyGraphDBRequest.SerializeToString,
+                response_deserializer=query__servicer__pb2.ToyGraphDBResponse.FromString,
+                )
 
 
 class ToyGraphDBServicer(object):
@@ -37,127 +37,93 @@ class ToyGraphDBServicer(object):
     def readGraph(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details("Method not implemented!")
-        raise NotImplementedError("Method not implemented!")
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
     def createGraph(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details("Method not implemented!")
-        raise NotImplementedError("Method not implemented!")
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
     def CallFunctionalityInGraph(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details("Method not implemented!")
-        raise NotImplementedError("Method not implemented!")
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
 
 def add_ToyGraphDBServicer_to_server(servicer, server):
     rpc_method_handlers = {
-        "readGraph": grpc.unary_unary_rpc_method_handler(
-            servicer.readGraph,
-            request_deserializer=query__servicer__pb2.ToyGraphDBRequest.FromString,
-            response_serializer=query__servicer__pb2.ToyGraphDBResponse.SerializeToString,
-        ),
-        "createGraph": grpc.unary_unary_rpc_method_handler(
-            servicer.createGraph,
-            request_deserializer=query__servicer__pb2.ToyGraphDBRequest.FromString,
-            response_serializer=query__servicer__pb2.ToyGraphDBResponse.SerializeToString,
-        ),
-        "CallFunctionalityInGraph": grpc.unary_unary_rpc_method_handler(
-            servicer.CallFunctionalityInGraph,
-            request_deserializer=query__servicer__pb2.ToyGraphDBRequest.FromString,
-            response_serializer=query__servicer__pb2.ToyGraphDBResponse.SerializeToString,
-        ),
+            'readGraph': grpc.unary_unary_rpc_method_handler(
+                    servicer.readGraph,
+                    request_deserializer=query__servicer__pb2.ToyGraphDBRequest.FromString,
+                    response_serializer=query__servicer__pb2.ToyGraphDBResponse.SerializeToString,
+            ),
+            'createGraph': grpc.unary_unary_rpc_method_handler(
+                    servicer.createGraph,
+                    request_deserializer=query__servicer__pb2.ToyGraphDBRequest.FromString,
+                    response_serializer=query__servicer__pb2.ToyGraphDBResponse.SerializeToString,
+            ),
+            'CallFunctionalityInGraph': grpc.unary_unary_rpc_method_handler(
+                    servicer.CallFunctionalityInGraph,
+                    request_deserializer=query__servicer__pb2.ToyGraphDBRequest.FromString,
+                    response_serializer=query__servicer__pb2.ToyGraphDBResponse.SerializeToString,
+            ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-        "ToyGraphDB", rpc_method_handlers
-    )
+            'ToyGraphDB', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
-# This class is part of an EXPERIMENTAL API.
+ # This class is part of an EXPERIMENTAL API.
 class ToyGraphDB(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def readGraph(
-        request,
-        target,
-        options=(),
-        channel_credentials=None,
-        call_credentials=None,
-        compression=None,
-        wait_for_ready=None,
-        timeout=None,
-        metadata=None,
-    ):
-        return grpc.experimental.unary_unary(
-            request,
+    def readGraph(request,
             target,
-            "/ToyGraphDB/readGraph",
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ToyGraphDB/readGraph',
             query__servicer__pb2.ToyGraphDBRequest.SerializeToString,
             query__servicer__pb2.ToyGraphDBResponse.FromString,
-            options,
-            channel_credentials,
-            call_credentials,
-            compression,
-            wait_for_ready,
-            timeout,
-            metadata,
-        )
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def createGraph(
-        request,
-        target,
-        options=(),
-        channel_credentials=None,
-        call_credentials=None,
-        compression=None,
-        wait_for_ready=None,
-        timeout=None,
-        metadata=None,
-    ):
-        return grpc.experimental.unary_unary(
-            request,
+    def createGraph(request,
             target,
-            "/ToyGraphDB/createGraph",
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ToyGraphDB/createGraph',
             query__servicer__pb2.ToyGraphDBRequest.SerializeToString,
             query__servicer__pb2.ToyGraphDBResponse.FromString,
-            options,
-            channel_credentials,
-            call_credentials,
-            compression,
-            wait_for_ready,
-            timeout,
-            metadata,
-        )
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def CallFunctionalityInGraph(
-        request,
-        target,
-        options=(),
-        channel_credentials=None,
-        call_credentials=None,
-        compression=None,
-        wait_for_ready=None,
-        timeout=None,
-        metadata=None,
-    ):
-        return grpc.experimental.unary_unary(
-            request,
+    def CallFunctionalityInGraph(request,
             target,
-            "/ToyGraphDB/CallFunctionalityInGraph",
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ToyGraphDB/CallFunctionalityInGraph',
             query__servicer__pb2.ToyGraphDBRequest.SerializeToString,
             query__servicer__pb2.ToyGraphDBResponse.FromString,
-            options,
-            channel_credentials,
-            call_credentials,
-            compression,
-            wait_for_ready,
-            timeout,
-            metadata,
-        )
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)

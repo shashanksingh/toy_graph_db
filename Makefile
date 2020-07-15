@@ -4,8 +4,11 @@ install:
 install-dev:
 	PIP_CONFIG_FILE=pip.conf pip install -r requirements-dev.txt
 
+# ugly hack : https://github.com/QMSTR/pyqmstr/commit/0c6eb5b6e3d812607dd557e50ddf48b5f4ca379c
+# Issue : https://github.com/grpc/grpc/issues/9575
 proto:
 	python -m grpc_tools.protoc --proto_path=src/proto/  --python_out=src/generated/ --grpc_python_out=src/generated/ query_servicer.proto
+	cd src/generated && sed -i -r 's/import (.+_pb2.*)/from . import \1/g' *_pb2*.py
 
 build:
 	proto
