@@ -1,11 +1,11 @@
 # https://levelup.gitconnected.com/understanding-grpc-a-practical-application-in-go-and-python-f3003c9158ef
 
 #imports for functionality
-    from src.undirected import Undirected
-    from src.dag import Dag
-    from src.grid import Grid
-    from src.graph import Graph
-    from src.tree import Tree
+from src.undirected import Undirected
+from src.dag import Dag
+from src.grid import Grid
+from src.graph import Graph
+from src.tree import Tree
 
 #imports for the server
 import grpc
