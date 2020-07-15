@@ -18,7 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
     syntax="proto3",
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
-    serialized_pb=b'\n\x14query_servicer.proto"\xfa\x01\n\x11ToyGraphDBRequest\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x11\n\x03\x64\x61g\x18\x02 \x01(\x0b\x32\x04.dag\x12\x1b\n\x08\x64irected\x18\x03 \x01(\x0b\x32\t.directed\x12\x15\n\x05graph\x18\x04 \x01(\x0b\x32\x06.graph\x12\x13\n\x04grid\x18\x05 \x01(\x0b\x32\x05.grid\x12\x13\n\x04tree\x18\x06 \x01(\x0b\x32\x05.tree\x12\x13\n\x04trie\x18\x07 \x01(\x0b\x32\x05.trie\x12\x1f\n\nundirected\x18\x08 \x01(\x0b\x32\x0b.undirected\x12\x0f\n\x07message\x18\t \x01(\t\x12\x10\n\x08\x64\x61tabase\x18\n \x01(\t\x12\r\n\x05table\x18\x0b \x01(\t"\x05\n\x03\x64\x61g"\n\n\x08\x64irected"\x07\n\x05graph"\x06\n\x04grid"\x06\n\x04tree"\x06\n\x04trie"\x0c\n\nundirected"o\n\x12ToyGraphDBResponse\x12\x17\n\x06status\x18\x02 \x01(\x0b\x32\x07.status\x12\x1d\n\rerror_message\x18\x03 \x01(\x0b\x32\x06.Error\x12!\n\x0fsuccess_message\x18\x04 \x01(\x0b\x32\x08.Success"&\n\x05\x45rror\x12\x0c\n\x04\x63ode\x18\x03 \x01(\t\x12\x0f\n\x07message\x18\x04 \x01(\t"(\n\x07Success\x12\x0c\n\x04\x63ode\x18\x03 \x01(\t\x12\x0f\n\x07message\x18\x04 \x01(\t"8\n\x06status".\n\x06status\x12\x0c\n\x08\x41LL_GOOD\x10\x00\x12\x16\n\x12\x45VERYTHING_IS_FINE\x10\x01\x32\xc5\x01\n\nToyGraphDB\x12\x36\n\treadGraph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x12\x38\n\x0b\x63reateGraph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x12\x45\n\x18\x43\x61llFunctionalityInGraph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x62\x06proto3',
+    serialized_pb=b'\n\x14query_servicer.proto"\xfa\x01\n\x11ToyGraphDBRequest\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x11\n\x03\x64\x61g\x18\x02 \x01(\x0b\x32\x04.dag\x12\x1b\n\x08\x64irected\x18\x03 \x01(\x0b\x32\t.directed\x12\x15\n\x05graph\x18\x04 \x01(\x0b\x32\x06.graph\x12\x13\n\x04grid\x18\x05 \x01(\x0b\x32\x05.grid\x12\x13\n\x04tree\x18\x06 \x01(\x0b\x32\x05.tree\x12\x13\n\x04trie\x18\x07 \x01(\x0b\x32\x05.trie\x12\x1f\n\nundirected\x18\x08 \x01(\x0b\x32\x0b.undirected\x12\x0f\n\x07message\x18\t \x01(\t\x12\x10\n\x08\x64\x61tabase\x18\n \x01(\t\x12\r\n\x05table\x18\x0b \x01(\t"\x05\n\x03\x64\x61g"\n\n\x08\x64irected"\x07\n\x05graph"\x06\n\x04grid"\x06\n\x04tree"\x06\n\x04trie"\x0c\n\nundirected"o\n\x12ToyGraphDBResponse\x12\x17\n\x06status\x18\x02 \x01(\x0b\x32\x07.status\x12\x1d\n\rerror_message\x18\x03 \x01(\x0b\x32\x06.Error\x12!\n\x0fsuccess_message\x18\x04 \x01(\x0b\x32\x08.Success"&\n\x05\x45rror\x12\x0c\n\x04\x63ode\x18\x03 \x01(\t\x12\x0f\n\x07message\x18\x04 \x01(\t"(\n\x07Success\x12\x0c\n\x04\x63ode\x18\x03 \x01(\t\x12\x0f\n\x07message\x18\x04 \x01(\t"8\n\x06status".\n\x06status\x12\x0c\n\x08\x41LL_GOOD\x10\x00\x12\x16\n\x12\x45VERYTHING_IS_FINE\x10\x01\x32\xca\x01\n\nToyGraphDB\x12\x37\n\nread_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x12\x39\n\x0c\x63reate_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x12H\n\x1b\x63\x61ll_functionality_in_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x62\x06proto3',
 )
 
 
@@ -817,11 +817,11 @@ _TOYGRAPHDB = _descriptor.ServiceDescriptor(
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
     serialized_start=597,
-    serialized_end=794,
+    serialized_end=799,
     methods=[
         _descriptor.MethodDescriptor(
-            name="readGraph",
-            full_name="ToyGraphDB.readGraph",
+            name="read_graph",
+            full_name="ToyGraphDB.read_graph",
             index=0,
             containing_service=None,
             input_type=_TOYGRAPHDBREQUEST,
@@ -830,8 +830,8 @@ _TOYGRAPHDB = _descriptor.ServiceDescriptor(
             create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
-            name="createGraph",
-            full_name="ToyGraphDB.createGraph",
+            name="create_graph",
+            full_name="ToyGraphDB.create_graph",
             index=1,
             containing_service=None,
             input_type=_TOYGRAPHDBREQUEST,
@@ -840,8 +840,8 @@ _TOYGRAPHDB = _descriptor.ServiceDescriptor(
             create_key=_descriptor._internal_create_key,
         ),
         _descriptor.MethodDescriptor(
-            name="CallFunctionalityInGraph",
-            full_name="ToyGraphDB.CallFunctionalityInGraph",
+            name="call_functionality_in_graph",
+            full_name="ToyGraphDB.call_functionality_in_graph",
             index=2,
             containing_service=None,
             input_type=_TOYGRAPHDBREQUEST,
