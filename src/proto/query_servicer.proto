@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+service ToyGraphDB {
+
+  rpc readGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // Obtains the graph in question
+
+  rpc createGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // create a graph based on params
+
+  rpc CallFunctionalityInGraph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // Calls functions on the graph in question
+}
+
+message ToyGraphDBRequest {
+  string type = 1;
+  dag dag = 2;
+  directed directed = 3;
+  graph graph = 4;
+  grid grid = 5;
+  tree tree = 6;
+  trie trie = 7;
+  undirected undirected = 8;
+  string message = 9;
+  string database = 10;
+  string table = 11;
+}
+
+message dag {}
+message directed {}
+message graph {}
+message grid {}
+message tree {}
+message trie {}
+message undirected {}
+
+// The response message containing the greetings
+message ToyGraphDBResponse {
+  status status = 2;
+  Error error_message = 3;
+  Success success_message = 4;
+}
+
+message Error {
+  string code = 3;
+  string message = 4;
+}
+
+message Success {
+  string code = 3;
+  string message = 4;
+}
+
+message status {
+    enum status {
+        ALL_GOOD=0;
+        EVERYTHING_IS_FINE=1;
+    }
+}
