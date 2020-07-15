@@ -1,1 +1,1 @@
-import query_servicer_pb2
+from . import query_servicer_pb2
