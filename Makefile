@@ -5,7 +5,7 @@ install-dev:
 	PIP_CONFIG_FILE=pip.conf pip install -r requirements-dev.txt
 
 proto:
-	python -m grpc_tools.protoc --proto_path=src/proto/  --python_out=src/generated/ --grpc_python_out=src/generated/ basic.proto
+	python -m grpc_tools.protoc --proto_path=src/proto/  --python_out=src/generated/ --grpc_python_out=src/generated/ query_servicer.proto
 
 build:
 	proto

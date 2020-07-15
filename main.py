@@ -1,25 +1,32 @@
 # https://levelup.gitconnected.com/understanding-grpc-a-practical-application-in-go-and-python-f3003c9158ef
 
-from src.undirected import Undirected
-from src.dag import Dag
-from src.grid import Grid
-from src.graph import Graph
-from src.tree import Tree
+#imports for functionality
+    from src.undirected import Undirected
+    from src.dag import Dag
+    from src.grid import Grid
+    from src.graph import Graph
+    from src.tree import Tree
 
-a = Undirected(2, [[0, 1]])
-b = Dag(2, [[0, 1]])
-c = Grid([[1, 0, 1]])
-d = Graph()
-e = Tree(2, [[0, 1]])
+#imports for the server
+import grpc
+from src.generated.query_servicer_pb2_grpc import ToyGraphDBServicer, add_ToyGraphDBServicer_to_server
+import logging
+from concurrent import futures
 
-print(a.is_tree())
-print(b.topological_sort())
-print(c.count_of_connected_components())
-print()
+PORT_EXPOSED = 8080
 
-a.save_into_storage()
-b.save_into_storage()
-c.save_into_storage()
-e.save_into_storage()
-print(d.list_all())
-# needs to have a RPC server to load/create/read/run_functions/write objects when needs
+class ToyGraphDBServicer(ToyGraphDBServicer):
+    def __init__(self):
+        pass
+
+def serve():
+    server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
+    add_ToyGraphDBServicer_to_server(ToyGraphDBServicer(), server)
+    server.add_insecure_port(f'[::]:{PORT_EXPOSED}')
+    server.start()
+    server.wait_for_termination()
+
+
+if __name__ == '__main__':
+    logging.basicConfig()
+    serve()
