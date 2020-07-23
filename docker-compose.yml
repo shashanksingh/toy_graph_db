@@ -1,3 +1,13 @@
 #one nginx to foward proxy requests to our toy db instances
 # load a permanenent volume that all toy db will write and read from
 
+version: '3.3'
+services:
+  db:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/code
+  nginx:
+    image: "nginx"
