@@ -16,7 +16,7 @@ from src.generated.query_servicer_pb2_grpc import (
 import logging
 from concurrent import futures
 
-PORT_EXPOSED = 8080
+PORT_EXPOSED = 9090
 
 
 class ToyGraphDBServicer(ToyGraphDBServicer):
