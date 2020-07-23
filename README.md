@@ -1,3 +1,8 @@
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
+
 # Toy GraphDB
 
 Just a toy graph db so that we can play around with graph algorithms 
@@ -24,9 +29,16 @@ Writing
 
 
 # Task List
+[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues/)
+
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues?q=is%3Aissue+is%3Aclosed)
+
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/Naereen/badges.svg)](http://isitmaintained.com/project/Naereen/badges "Average time to resolve an issue")
+
+Source : 
 https://github.com/shashanksingh/toy_graph_db/projects/1
 
-progress : https://github.com/shashanksingh/toy_graph_db/projects/1#column-10018074
+
 
 
 
