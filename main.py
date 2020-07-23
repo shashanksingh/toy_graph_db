@@ -13,6 +13,8 @@ from src.generated.query_servicer_pb2_grpc import (
     ToyGraphDBServicer,
     add_ToyGraphDBServicer_to_server,
 )
+from src.generated import query_servicer_pb2 as query__servicer__pb2
+
 import logging
 from concurrent import futures
 
@@ -30,7 +32,8 @@ class ToyGraphDBServicer(ToyGraphDBServicer):
         pass
 
     def create_graph(self, request, context):
-        pass
+        type_of_graph = request.type
+        if type_of_graph == query__servicer__pb2.
 
     def call_functionality_in_graph(self, request, context):
         pass

@@ -10,7 +10,16 @@ service ToyGraphDB {
 }
 
 message ToyGraphDBRequest {
-  string type = 1;
+  enum type_of_graph {
+      GRAPH = 0;
+      DAG = 1;
+      DIRECTED = 2;
+      GRID = 3;
+      TREE = 4;
+      TRIE = 5;
+      UNDIRECTED = 6;
+  }
+  type_of_graph type  = 1;
   dag dag = 2;
   directed directed = 3;
   graph graph = 4;
