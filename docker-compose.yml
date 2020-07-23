@@ -4,8 +4,8 @@
 version: '3.3'
 services:
   db:
-    build: .
-      context:
+    build:
+      context: .
       dockerfile: toygraphdb.Dockerfile
     ports:
       - "9090:9090"
@@ -16,6 +16,6 @@ services:
       context: .
       dockerfile: envoy.Dockerfile
     depends_on:
-      - server
+      - db
     ports:
       - "8080:8080"
