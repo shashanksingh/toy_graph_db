@@ -37,7 +37,7 @@ message dag {}
 message directed {}
 message graph {}
 message grid {
-  list_of_list_of_integer grid=1;
+  list_of_list_of_integer data=1;
 }
 message tree {}
 message trie {}
@@ -64,13 +64,16 @@ message status {
     enum status {
         ALL_GOOD=0;
         EVERYTHING_IS_FINE=1;
+        COOL_YOUR_JETS=2;
+        SOMETHING_WENT_WRONG=3;
+        QUERY_IS_INCORRECT=4;
     }
 }
 
 //input types for graph db primitives
 message list_of_integer {
-  repeated uint32 grid=1;
+  repeated uint32 data=1;
 }
 message list_of_list_of_integer {
-  repeated list_of_integer list=1;
+  repeated list_of_integer data=1;
 }

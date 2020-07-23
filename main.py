@@ -1,6 +1,7 @@
 # https://levelup.gitconnected.com/understanding-grpc-a-practical-application-in-go-and-python-f3003c9158ef
 
 # imports for functionality
+from src.generated.query_servicer_pb2 import ToyGraphDBResponse, status
 from src.undirected import Undirected
 from src.dag import Dag
 from src.grid import Grid
@@ -34,8 +35,13 @@ class ToyGraphDBServicer(ToyGraphDBServicer):
     def create_graph(self, request, context):
         type_of_graph = request.type
         if type_of_graph == query__servicer__pb2.type_of_graph.GRID:
-            pass
-        elif type_of_graph == query__servicer__pb2.type_of_graph.DAG:
+            response = ToyGraphDBResponse()
+            try:
+                graph = Grid(request.grid.data)
+            except:
+                response.status.status = query__servicer__pb2.status.SOMETHING_WENT_WRONG
+            response.status.status  = query__servicer__pb2.status.ALL_GOOD
+        elif type_of_graph == type_of_graph.DAG:
             pass
 
     def call_functionality_in_graph(self, request, context):
