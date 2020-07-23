@@ -32,29 +32,32 @@ message ToyGraphDBRequest {
   string table = 11;
 }
 
+//toy graph db graph primites
 message dag {}
 message directed {}
 message graph {}
-message grid {}
+message grid {
+  list_of_list_of_integer grid=1;
+}
 message tree {}
 message trie {}
 message undirected {}
 
-// The response message containing the greetings
+// The response message containing the graph data
 message ToyGraphDBResponse {
-  status status = 2;
-  Error error_message = 3;
-  Success success_message = 4;
+  status status = 1;
+  Error error_message = 2;
+  Success success_message = 3;
 }
 
 message Error {
-  string code = 3;
-  string message = 4;
+  string code = 1;
+  string message = 2;
 }
 
 message Success {
-  string code = 3;
-  string message = 4;
+  string code = 1;
+  string message = 2;
 }
 
 message status {
@@ -62,4 +65,12 @@ message status {
         ALL_GOOD=0;
         EVERYTHING_IS_FINE=1;
     }
+}
+
+//input types for graph db primitives
+message list_of_integer {
+  repeated uint32 grid=1;
+}
+message list_of_list_of_integer {
+  repeated list_of_integer list=1;
 }

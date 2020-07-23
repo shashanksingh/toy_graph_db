@@ -33,7 +33,10 @@ class ToyGraphDBServicer(ToyGraphDBServicer):
 
     def create_graph(self, request, context):
         type_of_graph = request.type
-        if type_of_graph == query__servicer__pb2.
+        if type_of_graph == query__servicer__pb2.type_of_graph.GRID:
+            pass
+        elif type_of_graph == query__servicer__pb2.type_of_graph.DAG:
+            pass
 
     def call_functionality_in_graph(self, request, context):
         pass
