@@ -20,3 +20,12 @@ Writing
 | test_performance_of_saving_all_graphs_into_storage 	| 46.5050 	| 132.3730 	| 49.8334 	|    20.0669   	|
 |                                                    	|         	|          	|         	|              	|
 |                                                    	|         	|          	|         	|              	|
+
+
+
+# Task List
+https://github.com/shashanksingh/toy_graph_db/projects/1
+
+
+
+
