@@ -26,6 +26,8 @@ Writing
 # Task List
 https://github.com/shashanksingh/toy_graph_db/projects/1
 
+progress : https://github.com/shashanksingh/toy_graph_db/projects/1#column-10018074
+
 
 
 
