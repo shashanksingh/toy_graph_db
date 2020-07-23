@@ -29,11 +29,7 @@ Writing
 
 
 # Task List
-[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues/)
-
-[![GitHub issues-closed](https://img.shields.io/github/issues-closed/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues?q=is%3Aissue+is%3Aclosed)
-
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/Naereen/badges.svg)](http://isitmaintained.com/project/Naereen/badges "Average time to resolve an issue")
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/shashanksingh/toy_graph_db.svg)](http://isitmaintained.com/project/shashanksingh/toy_graph_db "Average time to resolve an issue") [![Percentage of issues still open](http://isitmaintained.com/badge/open/shashanksingh/toy_graph_db.svg)](http://isitmaintained.com/project/shashanksingh/toy_graph_db "Percentage of issues still open")
 
 Source : 
 https://github.com/shashanksingh/toy_graph_db/projects/1
