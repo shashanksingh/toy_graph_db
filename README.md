@@ -1,6 +1,4 @@
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
-
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 
 # Toy GraphDB
@@ -29,7 +27,9 @@ Writing
 
 
 # Task List
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/shashanksingh/toy_graph_db.svg)](http://isitmaintained.com/project/shashanksingh/toy_graph_db "Average time to resolve an issue") [![Percentage of issues still open](http://isitmaintained.com/badge/open/shashanksingh/toy_graph_db.svg)](http://isitmaintained.com/project/shashanksingh/toy_graph_db "Percentage of issues still open")
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/shashanksingh/toy_graph_db.svg)](http://isitmaintained.com/project/shashanksingh/toy_graph_db "Average time to resolve an issue") [![Percentage of issues still open](http://isitmaintained.com/badge/open/shashanksingh/toy_graph_db.svg)](http://isitmaintained.com/project/shashanksingh/toy_graph_db "Percentage of issues still open") [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+
 
 Source : 
 https://github.com/shashanksingh/toy_graph_db/projects/1
