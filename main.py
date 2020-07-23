@@ -23,6 +23,9 @@ class ToyGraphDBServicer(ToyGraphDBServicer):
     def __init__(self):
         pass
 
+    def ping(self, request, context):
+        return "pong"
+
     def read_graph(self, request, context):
         pass
 
