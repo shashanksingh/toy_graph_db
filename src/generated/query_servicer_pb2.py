@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x14query_servicer.proto\"\xfd\x02\n\x11ToyGraphDBRequest\x12.\n\x04type\x18\x01 \x01(\x0e\x32 .ToyGraphDBRequest.type_of_graph\x12\x11\n\x03\x64\x61g\x18\x02 \x01(\x0b\x32\x04.dag\x12\x1b\n\x08\x64irected\x18\x03 \x01(\x0b\x32\t.directed\x12\x15\n\x05graph\x18\x04 \x01(\x0b\x32\x06.graph\x12\x13\n\x04grid\x18\x05 \x01(\x0b\x32\x05.grid\x12\x13\n\x04tree\x18\x06 \x01(\x0b\x32\x05.tree\x12\x13\n\x04trie\x18\x07 \x01(\x0b\x32\x05.trie\x12\x1f\n\nundirected\x18\x08 \x01(\x0b\x32\x0b.undirected\x12\x0f\n\x07message\x18\t \x01(\t\x12\x10\n\x08\x64\x61tabase\x18\n \x01(\t\x12\r\n\x05table\x18\x0b \x01(\t\"_\n\rtype_of_graph\x12\t\n\x05GRAPH\x10\x00\x12\x07\n\x03\x44\x41G\x10\x01\x12\x0c\n\x08\x44IRECTED\x10\x02\x12\x08\n\x04GRID\x10\x03\x12\x08\n\x04TREE\x10\x04\x12\x08\n\x04TRIE\x10\x05\x12\x0e\n\nUNDIRECTED\x10\x06\"\x05\n\x03\x64\x61g\"\n\n\x08\x64irected\"\x07\n\x05graph\"\x06\n\x04grid\"\x06\n\x04tree\"\x06\n\x04trie\"\x0c\n\nundirected\"o\n\x12ToyGraphDBResponse\x12\x17\n\x06status\x18\x02 \x01(\x0b\x32\x07.status\x12\x1d\n\rerror_message\x18\x03 \x01(\x0b\x32\x06.Error\x12!\n\x0fsuccess_message\x18\x04 \x01(\x0b\x32\x08.Success\"&\n\x05\x45rror\x12\x0c\n\x04\x63ode\x18\x03 \x01(\t\x12\x0f\n\x07message\x18\x04 \x01(\t\"(\n\x07Success\x12\x0c\n\x04\x63ode\x18\x03 \x01(\t\x12\x0f\n\x07message\x18\x04 \x01(\t\"8\n\x06status\".\n\x06status\x12\x0c\n\x08\x41LL_GOOD\x10\x00\x12\x16\n\x12\x45VERYTHING_IS_FINE\x10\x01\x32\xca\x01\n\nToyGraphDB\x12\x37\n\nread_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x12\x39\n\x0c\x63reate_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x12H\n\x1b\x63\x61ll_functionality_in_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x14query_servicer.proto\"\xfd\x02\n\x11ToyGraphDBRequest\x12.\n\x04type\x18\x01 \x01(\x0e\x32 .ToyGraphDBRequest.type_of_graph\x12\x11\n\x03\x64\x61g\x18\x02 \x01(\x0b\x32\x04.dag\x12\x1b\n\x08\x64irected\x18\x03 \x01(\x0b\x32\t.directed\x12\x15\n\x05graph\x18\x04 \x01(\x0b\x32\x06.graph\x12\x13\n\x04grid\x18\x05 \x01(\x0b\x32\x05.grid\x12\x13\n\x04tree\x18\x06 \x01(\x0b\x32\x05.tree\x12\x13\n\x04trie\x18\x07 \x01(\x0b\x32\x05.trie\x12\x1f\n\nundirected\x18\x08 \x01(\x0b\x32\x0b.undirected\x12\x0f\n\x07message\x18\t \x01(\t\x12\x10\n\x08\x64\x61tabase\x18\n \x01(\t\x12\r\n\x05table\x18\x0b \x01(\t\"_\n\rtype_of_graph\x12\t\n\x05GRAPH\x10\x00\x12\x07\n\x03\x44\x41G\x10\x01\x12\x0c\n\x08\x44IRECTED\x10\x02\x12\x08\n\x04GRID\x10\x03\x12\x08\n\x04TREE\x10\x04\x12\x08\n\x04TRIE\x10\x05\x12\x0e\n\nUNDIRECTED\x10\x06\"\x05\n\x03\x64\x61g\"\n\n\x08\x64irected\"\x07\n\x05graph\".\n\x04grid\x12&\n\x04grid\x18\x01 \x01(\x0b\x32\x18.list_of_list_of_integer\"\x06\n\x04tree\"\x06\n\x04trie\"\x0c\n\nundirected\"o\n\x12ToyGraphDBResponse\x12\x17\n\x06status\x18\x01 \x01(\x0b\x32\x07.status\x12\x1d\n\rerror_message\x18\x02 \x01(\x0b\x32\x06.Error\x12!\n\x0fsuccess_message\x18\x03 \x01(\x0b\x32\x08.Success\"&\n\x05\x45rror\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\"(\n\x07Success\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\"8\n\x06status\".\n\x06status\x12\x0c\n\x08\x41LL_GOOD\x10\x00\x12\x16\n\x12\x45VERYTHING_IS_FINE\x10\x01\"\x1f\n\x0flist_of_integer\x12\x0c\n\x04grid\x18\x01 \x03(\r\"9\n\x17list_of_list_of_integer\x12\x1e\n\x04list\x18\x01 \x03(\x0b\x32\x10.list_of_integer2\xca\x01\n\nToyGraphDB\x12\x37\n\nread_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x12\x39\n\x0c\x63reate_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x12H\n\x1b\x63\x61ll_functionality_in_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x62\x06proto3'
 )
 
 
@@ -94,8 +94,8 @@ _STATUS_STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=679,
-  serialized_end=725,
+  serialized_start=719,
+  serialized_end=765,
 )
 _sym_db.RegisterEnumDescriptor(_STATUS_STATUS)
 
@@ -286,6 +286,13 @@ _GRID = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='grid', full_name='grid.grid', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -298,8 +305,8 @@ _GRID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=165,
-  serialized_end=171,
+  serialized_start=436,
+  serialized_end=482,
 )
 
 
@@ -388,21 +395,21 @@ _TOYGRAPHDBRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='status', full_name='ToyGraphDBResponse.status', index=0,
-      number=2, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='error_message', full_name='ToyGraphDBResponse.error_message', index=1,
-      number=3, type=11, cpp_type=10, label=1,
+      number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='success_message', full_name='ToyGraphDBResponse.success_message', index=2,
-      number=4, type=11, cpp_type=10, label=1,
+      number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -419,8 +426,8 @@ _TOYGRAPHDBRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=474,
-  serialized_end=585,
+  serialized_start=514,
+  serialized_end=625,
 )
 
 
@@ -434,53 +441,14 @@ _ERROR = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='code', full_name='Error.code', index=0,
-      number=3, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='message', full_name='Error.message', index=1,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=587,
-  serialized_end=625,
-)
-
-
-_SUCCESS = _descriptor.Descriptor(
-  name='Success',
-  full_name='Success',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='code', full_name='Success.code', index=0,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='message', full_name='Success.message', index=1,
-      number=4, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -498,7 +466,46 @@ _SUCCESS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=627,
-  serialized_end=667,
+  serialized_end=665,
+)
+
+
+_SUCCESS = _descriptor.Descriptor(
+  name='Success',
+  full_name='Success',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='code', full_name='Success.code', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='message', full_name='Success.message', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=667,
+  serialized_end=707,
 )
 
 
@@ -523,8 +530,72 @@ _STATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=669,
-  serialized_end=725,
+  serialized_start=709,
+  serialized_end=765,
+)
+
+
+_LIST_OF_INTEGER = _descriptor.Descriptor(
+  name='list_of_integer',
+  full_name='list_of_integer',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='grid', full_name='list_of_integer.grid', index=0,
+      number=1, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=767,
+  serialized_end=798,
+)
+
+
+_LIST_OF_LIST_OF_INTEGER = _descriptor.Descriptor(
+  name='list_of_list_of_integer',
+  full_name='list_of_list_of_integer',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='list', full_name='list_of_list_of_integer.list', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=800,
+  serialized_end=857,
 )
 
 _TOYGRAPHDBREQUEST.fields_by_name['type'].enum_type = _TOYGRAPHDBREQUEST_TYPE_OF_GRAPH
@@ -536,10 +607,12 @@ _TOYGRAPHDBREQUEST.fields_by_name['tree'].message_type = _TREE
 _TOYGRAPHDBREQUEST.fields_by_name['trie'].message_type = _TRIE
 _TOYGRAPHDBREQUEST.fields_by_name['undirected'].message_type = _UNDIRECTED
 _TOYGRAPHDBREQUEST_TYPE_OF_GRAPH.containing_type = _TOYGRAPHDBREQUEST
+_GRID.fields_by_name['grid'].message_type = _LIST_OF_LIST_OF_INTEGER
 _TOYGRAPHDBRESPONSE.fields_by_name['status'].message_type = _STATUS
 _TOYGRAPHDBRESPONSE.fields_by_name['error_message'].message_type = _ERROR
 _TOYGRAPHDBRESPONSE.fields_by_name['success_message'].message_type = _SUCCESS
 _STATUS_STATUS.containing_type = _STATUS
+_LIST_OF_LIST_OF_INTEGER.fields_by_name['list'].message_type = _LIST_OF_INTEGER
 DESCRIPTOR.message_types_by_name['ToyGraphDBRequest'] = _TOYGRAPHDBREQUEST
 DESCRIPTOR.message_types_by_name['dag'] = _DAG
 DESCRIPTOR.message_types_by_name['directed'] = _DIRECTED
@@ -552,6 +625,8 @@ DESCRIPTOR.message_types_by_name['ToyGraphDBResponse'] = _TOYGRAPHDBRESPONSE
 DESCRIPTOR.message_types_by_name['Error'] = _ERROR
 DESCRIPTOR.message_types_by_name['Success'] = _SUCCESS
 DESCRIPTOR.message_types_by_name['status'] = _STATUS
+DESCRIPTOR.message_types_by_name['list_of_integer'] = _LIST_OF_INTEGER
+DESCRIPTOR.message_types_by_name['list_of_list_of_integer'] = _LIST_OF_LIST_OF_INTEGER
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ToyGraphDBRequest = _reflection.GeneratedProtocolMessageType('ToyGraphDBRequest', (_message.Message,), {
@@ -638,6 +713,20 @@ status = _reflection.GeneratedProtocolMessageType('status', (_message.Message,),
   })
 _sym_db.RegisterMessage(status)
 
+list_of_integer = _reflection.GeneratedProtocolMessageType('list_of_integer', (_message.Message,), {
+  'DESCRIPTOR' : _LIST_OF_INTEGER,
+  '__module__' : 'query_servicer_pb2'
+  # @@protoc_insertion_point(class_scope:list_of_integer)
+  })
+_sym_db.RegisterMessage(list_of_integer)
+
+list_of_list_of_integer = _reflection.GeneratedProtocolMessageType('list_of_list_of_integer', (_message.Message,), {
+  'DESCRIPTOR' : _LIST_OF_LIST_OF_INTEGER,
+  '__module__' : 'query_servicer_pb2'
+  # @@protoc_insertion_point(class_scope:list_of_list_of_integer)
+  })
+_sym_db.RegisterMessage(list_of_list_of_integer)
+
 
 
 _TOYGRAPHDB = _descriptor.ServiceDescriptor(
@@ -647,8 +736,8 @@ _TOYGRAPHDB = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=728,
-  serialized_end=930,
+  serialized_start=860,
+  serialized_end=1062,
   methods=[
   _descriptor.MethodDescriptor(
     name='read_graph',
