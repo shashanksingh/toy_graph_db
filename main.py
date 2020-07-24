@@ -57,7 +57,7 @@ class ToyGraphDBServicerProxy(ToyGraphDBServicer):
                 else None
             )
             response = ToyGraphDBResponse(
-                status=Status(status=query__servicer__pb2.Status.ALL_GOOD),
+                status=None,
                 error_message=None,
                 success_message=Success(
                     code_number=query__servicer__pb2.Success.Code.ALL_GOOD,
@@ -67,7 +67,7 @@ class ToyGraphDBServicerProxy(ToyGraphDBServicer):
 
         except ValueError as e:
             response = ToyGraphDBResponse(
-                status=Status(status=query__servicer__pb2.Status.SOMETHING_WENT_WRONG),
+                status=None,
                 error_message=None,
                 success_message=None,
             )
