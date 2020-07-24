@@ -14,6 +14,11 @@ class ToyGraphDBStub(object):
         Args:
             channel: A grpc.Channel.
         """
+        self.ping = channel.unary_unary(
+            "/ToyGraphDB/ping",
+            request_serializer=query__servicer__pb2.Empty.SerializeToString,
+            response_deserializer=query__servicer__pb2.Pong.FromString,
+        )
         self.read_graph = channel.unary_unary(
             "/ToyGraphDB/read_graph",
             request_serializer=query__servicer__pb2.ToyGraphDBRequest.SerializeToString,
@@ -33,6 +38,12 @@ class ToyGraphDBStub(object):
 
 class ToyGraphDBServicer(object):
     """Missing associated documentation comment in .proto file."""
+
+    def ping(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def read_graph(self, request, context):
         """Missing associated documentation comment in .proto file."""
@@ -55,6 +66,11 @@ class ToyGraphDBServicer(object):
 
 def add_ToyGraphDBServicer_to_server(servicer, server):
     rpc_method_handlers = {
+        "ping": grpc.unary_unary_rpc_method_handler(
+            servicer.ping,
+            request_deserializer=query__servicer__pb2.Empty.FromString,
+            response_serializer=query__servicer__pb2.Pong.SerializeToString,
+        ),
         "read_graph": grpc.unary_unary_rpc_method_handler(
             servicer.read_graph,
             request_deserializer=query__servicer__pb2.ToyGraphDBRequest.FromString,
@@ -80,6 +96,33 @@ def add_ToyGraphDBServicer_to_server(servicer, server):
 # This class is part of an EXPERIMENTAL API.
 class ToyGraphDB(object):
     """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def ping(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            "/ToyGraphDB/ping",
+            query__servicer__pb2.Empty.SerializeToString,
+            query__servicer__pb2.Pong.FromString,
+            options,
+            channel_credentials,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
     def read_graph(

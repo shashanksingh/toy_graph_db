@@ -2,13 +2,18 @@ syntax = "proto3";
 
 service ToyGraphDB {
 
+  rpc ping (Empty) returns (Pong) {} // Obtains the graph in question
+
   rpc read_graph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // Obtains the graph in question
 
   rpc create_graph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // create a graph based on params
 
   rpc call_functionality_in_graph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // Calls functions on the graph in question
 }
-
+message Empty{}
+message Pong {
+  string message = 1;
+}
 message ToyGraphDBRequest {
   type_of_graphs type  = 1;
   dag dag = 2;

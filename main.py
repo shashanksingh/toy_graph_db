@@ -1,7 +1,7 @@
 # https://levelup.gitconnected.com/understanding-grpc-a-practical-application-in-go-and-python-f3003c9158ef
 
 # imports for functionality
-from src.generated.query_servicer_pb2 import ToyGraphDBResponse, status
+from src.generated.query_servicer_pb2 import ToyGraphDBResponse, Pong
 from src.undirected import Undirected
 from src.dag import Dag
 from src.grid import Grid
@@ -30,7 +30,7 @@ class ToyGraphDBServicerProxy(ToyGraphDBServicer):
         pass
 
     def ping(self, request, context):
-        return "pong"
+        return Pong(message="ALl hail GRPC")
 
     def read_graph(self, request, context):
         pass
@@ -51,9 +51,15 @@ class ToyGraphDBServicerProxy(ToyGraphDBServicer):
                 if type_of_graph == query__servicer__pb2.type_of_graphs.DAG
                 else None
             )
+            graph = (
+                Undirected(request.grid.data)
+                if type_of_graph == query__servicer__pb2.type_of_graphs.UNDIRECTED
+                else None
+            )
+            response.status.status = query__servicer__pb2.status.ALL_GOOD
+
         except ValueError as e:
             response.status.status = query__servicer__pb2.status.SOMETHING_WENT_WRONG
-            response.status.status = query__servicer__pb2.status.ALL_GOOD
 
         return response
 

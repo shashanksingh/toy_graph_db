@@ -1,5 +1,6 @@
 import grpc
 from src.generated import query_servicer_pb2, query_servicer_pb2_grpc
+from src.generated.query_servicer_pb2 import Empty
 
 PORT_EXPOSED = 9090
 SAMPLE_GRID = [[0, 1, 1], [0, 1, 1], [0, 1, 1]]
@@ -21,6 +22,8 @@ grid = query_servicer_pb2.list_of_list_of_integer(data=None)
 
 print(grid)
 # make the call
-response = stub.create_graph(grid)
+response = stub.ping(Empty())
+print(response)
 
+response = stub.create_graph(grid)
 print(response)
