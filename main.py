@@ -37,17 +37,25 @@ class ToyGraphDBServicerProxy(ToyGraphDBServicer):
 
     def create_graph(self, request, context):
         type_of_graph = request.type
-        if type_of_graph == query__servicer__pb2.type_of_graphs.GRID:
-            response = ToyGraphDBResponse()
-            try:
-                graph = Grid(request.grid.data)
-            except ValueError as e:
-                response.status.status = (
-                    query__servicer__pb2.status.SOMETHING_WENT_WRONG
-                )
+        response = ToyGraphDBResponse()
+        print(request, context)
+        try:
+            # can be better
+            graph = (
+                Grid(request.grid.data)
+                if type_of_graph == query__servicer__pb2.type_of_graphs.GRID
+                else None
+            )
+            graph = (
+                Dag(request.grid.data)
+                if type_of_graph == query__servicer__pb2.type_of_graphs.DAG
+                else None
+            )
+        except ValueError as e:
+            response.status.status = query__servicer__pb2.status.SOMETHING_WENT_WRONG
             response.status.status = query__servicer__pb2.status.ALL_GOOD
-        elif type_of_graph == type_of_graph.DAG:
-            pass
+
+        return response
 
     def call_functionality_in_graph(self, request, context):
         pass
