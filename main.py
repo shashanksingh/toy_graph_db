@@ -39,8 +39,10 @@ class ToyGraphDBServicer(ToyGraphDBServicer):
             try:
                 graph = Grid(request.grid.data)
             except:
-                response.status.status = query__servicer__pb2.status.SOMETHING_WENT_WRONG
-            response.status.status  = query__servicer__pb2.status.ALL_GOOD
+                response.status.status = (
+                    query__servicer__pb2.status.SOMETHING_WENT_WRONG
+                )
+            response.status.status = query__servicer__pb2.status.ALL_GOOD
         elif type_of_graph == type_of_graph.DAG:
             pass
 
