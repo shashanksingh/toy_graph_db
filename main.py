@@ -8,7 +8,7 @@ from src.grid import Grid
 from src.graph import Graph
 from src.tree import Tree
 
-#for fun
+# for fun
 import emoji
 
 # imports for the server
@@ -60,7 +60,6 @@ def serve():
     print(emoji.emojize(f"All systems go :rocket:"))
     server.start()
     server.wait_for_termination()
-
 
 
 if __name__ == "__main__":
