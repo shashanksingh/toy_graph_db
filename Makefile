@@ -18,7 +18,7 @@ test:
 	pytest -sv tests/
 
 black:
-	black --target-version py38 src/ tests/ main.py
+	black --target-version py38 src/ tests/ clients/ main.py
 
 fix:
 	black -l 120 src/ tests/
