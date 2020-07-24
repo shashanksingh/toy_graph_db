@@ -26,8 +26,11 @@ fix:
 clean:
 	rm -rf dist/ build/  || true
 
-run:
+run_server:
 	python main.py
+
+run_client	:
+	python clients/examples/create_grid.py
 
 .PHONY: freeze clean
 .SILENT: src_package
