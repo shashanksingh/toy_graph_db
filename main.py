@@ -1,7 +1,6 @@
 # https://levelup.gitconnected.com/understanding-grpc-a-practical-application-in-go-and-python-f3003c9158ef
 
 # imports for functionality
-from src.generated.query_servicer_pb2 import ToyGraphDBResponse, Pong
 from src.undirected import Undirected
 from src.dag import Dag
 from src.grid import Grid
@@ -13,6 +12,7 @@ import emoji
 
 # imports for the server
 import grpc
+from src.generated.query_servicer_pb2 import ToyGraphDBResponse, Pong, Status, Success
 from src.generated.query_servicer_pb2_grpc import (
     ToyGraphDBServicer,
     add_ToyGraphDBServicer_to_server,
@@ -37,30 +37,40 @@ class ToyGraphDBServicerProxy(ToyGraphDBServicer):
 
     def create_graph(self, request, context):
         type_of_graph = request.type
-        response = ToyGraphDBResponse()
+        response = None
         print(request, context)
         try:
             # can be better
             graph = (
                 Grid(request.grid.data)
-                if type_of_graph == query__servicer__pb2.type_of_graphs.GRID
+                if type_of_graph == query__servicer__pb2.Type_of_graphs.GRID
                 else None
             )
             graph = (
                 Dag(request.grid.data)
-                if type_of_graph == query__servicer__pb2.type_of_graphs.DAG
+                if type_of_graph == query__servicer__pb2.Type_of_graphs.DAG
                 else None
             )
             graph = (
                 Undirected(request.grid.data)
-                if type_of_graph == query__servicer__pb2.type_of_graphs.UNDIRECTED
+                if type_of_graph == query__servicer__pb2.Type_of_graphs.UNDIRECTED
                 else None
             )
-            response.status.status = query__servicer__pb2.status.ALL_GOOD
+            response = ToyGraphDBResponse(
+                status=Status(status=query__servicer__pb2.Status.ALL_GOOD),
+                error_message=None,
+                success_message=Success(
+                    code_number=query__servicer__pb2.Success.Code.ALL_GOOD,
+                    message="yay",
+                ),
+            )
 
         except ValueError as e:
-            response.status.status = query__servicer__pb2.status.SOMETHING_WENT_WRONG
-
+            response = ToyGraphDBResponse(
+                status=Status(status=query__servicer__pb2.Status.SOMETHING_WENT_WRONG),
+                error_message=None,
+                success_message=None,
+            )
         return response
 
     def call_functionality_in_graph(self, request, context):
