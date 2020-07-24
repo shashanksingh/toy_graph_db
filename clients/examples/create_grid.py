@@ -28,7 +28,8 @@ stub = query_servicer_pb2_grpc.ToyGraphDBStub(channel)
 response = stub.ping(Empty())
 print(response)
 
-type_of_graph = Type_of_graphs(type=)  # query_servicer_pb2.Type_of_graphs.GRID
+# https://www.freecodecamp.org/news/googles-protocol-buffers-in-python/
+type_of_graph = Type_of_graphs(type=None)  # query_servicer_pb2.Type_of_graphs.GRID
 grid_request_object = grid(data=query_servicer_pb2.List_of_list_of_integer(data=None))
 
 request = ToyGraphDBRequest(type=type_of_graph, grid=grid_request_object)
