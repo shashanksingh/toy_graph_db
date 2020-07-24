@@ -5,6 +5,8 @@ from src.generated.query_servicer_pb2 import (
     ToyGraphDBRequest,
     Type_of_graphs,
     grid,
+    List_of_integer,
+    List_of_list_of_integer,
 )
 
 PORT_EXPOSED = 9090
@@ -25,11 +27,15 @@ print(response)
 
 # https://www.freecodecamp.org/news/googles-protocol-buffers-in-python/
 # convert sample grid to data
-grid_data = query_servicer_pb2.List_of_list_of_integer(data=None)
+list_of_integer = List_of_integer()
+first_item = list_of_integer.add()
+first_item.data.append([1,2,3])
+
+grid_data = List_of_list_of_integer(data=list_of_integer)
 grid_request_object = grid(data=grid_data)
 
 request = ToyGraphDBRequest(
-    type=query_servicer_pb2.Type_of_graphs.GRID,
+    type=Type_of_graphs.GRID,
     grid=grid_request_object,
     database=DATABASE_NAME,
     table=TABLE_NAME,
