@@ -41,7 +41,7 @@ class ToyGraphDBServicerProxy(ToyGraphDBServicer):
             response = ToyGraphDBResponse()
             try:
                 graph = Grid(request.grid.data)
-            except:
+            except ValueError as e:
                 response.status.status = (
                     query__servicer__pb2.status.SOMETHING_WENT_WRONG
                 )
