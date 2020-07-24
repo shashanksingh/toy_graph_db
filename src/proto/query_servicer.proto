@@ -10,16 +10,7 @@ service ToyGraphDB {
 }
 
 message ToyGraphDBRequest {
-  enum type_of_graph {
-      GRAPH = 0;
-      DAG = 1;
-      DIRECTED = 2;
-      GRID = 3;
-      TREE = 4;
-      TRIE = 5;
-      UNDIRECTED = 6;
-  }
-  type_of_graph type  = 1;
+  type_of_graphs type  = 1;
   dag dag = 2;
   directed directed = 3;
   graph graph = 4;
@@ -60,6 +51,7 @@ message Success {
   string message = 2;
 }
 
+//enums
 message status {
     enum status {
         ALL_GOOD=0;
@@ -67,6 +59,17 @@ message status {
         COOL_YOUR_JETS=2;
         SOMETHING_WENT_WRONG=3;
         QUERY_IS_INCORRECT=4;
+    }
+}
+message type_of_graphs {
+    enum type_of_graph {
+      GRAPH = 0;
+      DAG = 1;
+      DIRECTED = 2;
+      GRID = 3;
+      TREE = 4;
+      TRIE = 5;
+      UNDIRECTED = 6;
     }
 }
 
