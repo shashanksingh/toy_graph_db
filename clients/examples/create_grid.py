@@ -10,8 +10,14 @@ channel = grpc.insecure_channel(f"localhost:{PORT_EXPOSED}")
 # create a stub (client)
 stub = query_servicer_pb2_grpc.ToyGraphDBStub(channel)
 
+
+# request_data = query_servicer_pb2.list_of_list_of_integer()
+# request_list = query_servicer_pb2.list_of_integer()
+# # request_list.list_of_integer.data.append(2)
+# print(request_list)
+# request_data.data
 # create a valid request message
-grid = query_servicer_pb2.list_of_list_of_integer(data=SAMPLE_GRID)
+grid = query_servicer_pb2.list_of_list_of_integer(data=None)
 
 print(grid)
 # make the call
