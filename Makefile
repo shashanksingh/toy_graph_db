@@ -29,7 +29,7 @@ clean:
 run_server:
 	python main.py
 
-run_client	:
+run_client:
 	python clients/examples/create_grid.py
 
 .PHONY: freeze clean
