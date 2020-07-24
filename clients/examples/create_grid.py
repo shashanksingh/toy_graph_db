@@ -9,6 +9,8 @@ from src.generated.query_servicer_pb2 import (
 
 PORT_EXPOSED = 9090
 SAMPLE_GRID = [[0, 1, 1], [0, 1, 1], [0, 1, 1]]
+DATABASE_NAME = "create_grid"
+TABLE_NAME = "simple_grid"
 
 # open a gRPC channel
 channel = grpc.insecure_channel(f"localhost:{PORT_EXPOSED}")
@@ -17,21 +19,19 @@ channel = grpc.insecure_channel(f"localhost:{PORT_EXPOSED}")
 stub = query_servicer_pb2_grpc.ToyGraphDBStub(channel)
 
 
-# request_data = query_servicer_pb2.list_of_list_of_integer()
-# request_list = query_servicer_pb2.list_of_integer()
-# # request_list.list_of_integer.data.append(2)
-# print(request_list)
-# request_data.data
-# create a valid request message
-
 # make the call
 response = stub.ping(Empty())
 print(response)
 
 # https://www.freecodecamp.org/news/googles-protocol-buffers-in-python/
-type_of_graph = Type_of_graphs(type=None)  # query_servicer_pb2.Type_of_graphs.GRID
+# convert sample grid to data
 grid_request_object = grid(data=query_servicer_pb2.List_of_list_of_integer(data=None))
 
-request = ToyGraphDBRequest(type=type_of_graph, grid=grid_request_object)
+request = ToyGraphDBRequest(
+    type=query_servicer_pb2.Type_of_graphs.GRID,
+    grid=grid_request_object,
+    database=DATABASE_NAME,
+    table=TABLE_NAME,
+)
 response = stub.create_graph(request)
 print(response)
