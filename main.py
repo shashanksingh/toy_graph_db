@@ -38,7 +38,7 @@ class ToyGraphDBServicerProxy(ToyGraphDBServicer):
     def create_graph(self, request, context):
         type_of_graph = request.type
         response = None
-        print(request.grid.data)
+        print(request.type)
         try:
             # can be better
             graph = (
