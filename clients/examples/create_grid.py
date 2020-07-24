@@ -1,6 +1,6 @@
 import grpc
 from src.generated import query_servicer_pb2, query_servicer_pb2_grpc
-from src.generated.query_servicer_pb2 import Empty
+from src.generated.query_servicer_pb2 import Empty, ToyGraphDBRequest, Type_of_graphs
 
 PORT_EXPOSED = 9090
 SAMPLE_GRID = [[0, 1, 1], [0, 1, 1], [0, 1, 1]]
@@ -25,5 +25,7 @@ print(grid)
 response = stub.ping(Empty())
 print(response)
 
-response = stub.create_graph(grid)
+type_of_graph = Type_of_graphs() #query_servicer_pb2.Type_of_graphs.GRID
+request = ToyGraphDBRequest(type=type_of_graph, grid=grid)
+response = stub.create_graph(request)
 print(response)
