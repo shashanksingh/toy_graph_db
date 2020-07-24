@@ -57,11 +57,13 @@ def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     add_ToyGraphDBServicer_to_server(ToyGraphDBServicer(), server)
     server.add_insecure_port(f"[::]:{PORT_EXPOSED}")
+    print(emoji.emojize(f"All systems go :rocket:"))
     server.start()
     server.wait_for_termination()
 
 
+
 if __name__ == "__main__":
     logging.basicConfig()
-    print(f"Running on port {PORT_EXPOSED} :thumbs_up:")
+    print(emoji.emojize(f"Running on port {PORT_EXPOSED} :thumbs_up:"))
     serve()
