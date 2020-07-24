@@ -25,7 +25,8 @@ print(response)
 
 # https://www.freecodecamp.org/news/googles-protocol-buffers-in-python/
 # convert sample grid to data
-grid_request_object = grid(data=query_servicer_pb2.List_of_list_of_integer(data=None))
+grid_data = query_servicer_pb2.List_of_list_of_integer(data=None)
+grid_request_object = grid(data=grid_data)
 
 request = ToyGraphDBRequest(
     type=query_servicer_pb2.Type_of_graphs.GRID,

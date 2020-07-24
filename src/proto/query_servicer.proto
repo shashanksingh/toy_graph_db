@@ -84,6 +84,7 @@ enum Type_of_graphs {
     TREE = 4;
     TRIE = 5;
     UNDIRECTED = 6;
+    INVALID = 7;
 }
 
 //input types for graph db primitives
