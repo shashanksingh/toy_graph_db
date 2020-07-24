@@ -42,12 +42,18 @@ message ToyGraphDBResponse {
 }
 
 message Error {
-  string code = 1;
+  enum code {
+    FAILED= 0;
+  }
+  code code_number = 1;
   string message = 2;
 }
 
 message Success {
-  string code = 1;
+  enum code {
+    ALL_GOOD= 0;
+  }
+  code code_number = 1;
   string message = 2;
 }
 

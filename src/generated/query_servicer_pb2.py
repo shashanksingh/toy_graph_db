@@ -19,10 +19,50 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x14query_servicer.proto\"\x8b\x02\n\x11ToyGraphDBRequest\x12\x1d\n\x04type\x18\x01 \x01(\x0b\x32\x0f.type_of_graphs\x12\x11\n\x03\x64\x61g\x18\x02 \x01(\x0b\x32\x04.dag\x12\x1b\n\x08\x64irected\x18\x03 \x01(\x0b\x32\t.directed\x12\x15\n\x05graph\x18\x04 \x01(\x0b\x32\x06.graph\x12\x13\n\x04grid\x18\x05 \x01(\x0b\x32\x05.grid\x12\x13\n\x04tree\x18\x06 \x01(\x0b\x32\x05.tree\x12\x13\n\x04trie\x18\x07 \x01(\x0b\x32\x05.trie\x12\x1f\n\nundirected\x18\x08 \x01(\x0b\x32\x0b.undirected\x12\x0f\n\x07message\x18\t \x01(\t\x12\x10\n\x08\x64\x61tabase\x18\n \x01(\t\x12\r\n\x05table\x18\x0b \x01(\t\"\x05\n\x03\x64\x61g\"\n\n\x08\x64irected\"\x07\n\x05graph\".\n\x04grid\x12&\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x18.list_of_list_of_integer\"\x06\n\x04tree\"\x06\n\x04trie\"\x0c\n\nundirected\"o\n\x12ToyGraphDBResponse\x12\x17\n\x06status\x18\x01 \x01(\x0b\x32\x07.status\x12\x1d\n\rerror_message\x18\x02 \x01(\x0b\x32\x06.Error\x12!\n\x0fsuccess_message\x18\x03 \x01(\x0b\x32\x08.Success\"&\n\x05\x45rror\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\"(\n\x07Success\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\"~\n\x06status\"t\n\x06status\x12\x0c\n\x08\x41LL_GOOD\x10\x00\x12\x16\n\x12\x45VERYTHING_IS_FINE\x10\x01\x12\x12\n\x0e\x43OOL_YOUR_JETS\x10\x02\x12\x18\n\x14SOMETHING_WENT_WRONG\x10\x03\x12\x16\n\x12QUERY_IS_INCORRECT\x10\x04\"q\n\x0etype_of_graphs\"_\n\rtype_of_graph\x12\t\n\x05GRAPH\x10\x00\x12\x07\n\x03\x44\x41G\x10\x01\x12\x0c\n\x08\x44IRECTED\x10\x02\x12\x08\n\x04GRID\x10\x03\x12\x08\n\x04TREE\x10\x04\x12\x08\n\x04TRIE\x10\x05\x12\x0e\n\nUNDIRECTED\x10\x06\"\x1f\n\x0flist_of_integer\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\r\"9\n\x17list_of_list_of_integer\x12\x1e\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x10.list_of_integer2\xca\x01\n\nToyGraphDB\x12\x37\n\nread_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x12\x39\n\x0c\x63reate_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x12H\n\x1b\x63\x61ll_functionality_in_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x14query_servicer.proto\"\x8b\x02\n\x11ToyGraphDBRequest\x12\x1d\n\x04type\x18\x01 \x01(\x0b\x32\x0f.type_of_graphs\x12\x11\n\x03\x64\x61g\x18\x02 \x01(\x0b\x32\x04.dag\x12\x1b\n\x08\x64irected\x18\x03 \x01(\x0b\x32\t.directed\x12\x15\n\x05graph\x18\x04 \x01(\x0b\x32\x06.graph\x12\x13\n\x04grid\x18\x05 \x01(\x0b\x32\x05.grid\x12\x13\n\x04tree\x18\x06 \x01(\x0b\x32\x05.tree\x12\x13\n\x04trie\x18\x07 \x01(\x0b\x32\x05.trie\x12\x1f\n\nundirected\x18\x08 \x01(\x0b\x32\x0b.undirected\x12\x0f\n\x07message\x18\t \x01(\t\x12\x10\n\x08\x64\x61tabase\x18\n \x01(\t\x12\r\n\x05table\x18\x0b \x01(\t\"\x05\n\x03\x64\x61g\"\n\n\x08\x64irected\"\x07\n\x05graph\".\n\x04grid\x12&\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x18.list_of_list_of_integer\"\x06\n\x04tree\"\x06\n\x04trie\"\x0c\n\nundirected\"o\n\x12ToyGraphDBResponse\x12\x17\n\x06status\x18\x01 \x01(\x0b\x32\x07.status\x12\x1d\n\rerror_message\x18\x02 \x01(\x0b\x32\x06.Error\x12!\n\x0fsuccess_message\x18\x03 \x01(\x0b\x32\x08.Success\"N\n\x05\x45rror\x12 \n\x0b\x63ode_number\x18\x01 \x01(\x0e\x32\x0b.Error.code\x12\x0f\n\x07message\x18\x02 \x01(\t\"\x12\n\x04\x63ode\x12\n\n\x06\x46\x41ILED\x10\x00\"T\n\x07Success\x12\"\n\x0b\x63ode_number\x18\x01 \x01(\x0e\x32\r.Success.code\x12\x0f\n\x07message\x18\x02 \x01(\t\"\x14\n\x04\x63ode\x12\x0c\n\x08\x41LL_GOOD\x10\x00\"~\n\x06status\"t\n\x06status\x12\x0c\n\x08\x41LL_GOOD\x10\x00\x12\x16\n\x12\x45VERYTHING_IS_FINE\x10\x01\x12\x12\n\x0e\x43OOL_YOUR_JETS\x10\x02\x12\x18\n\x14SOMETHING_WENT_WRONG\x10\x03\x12\x16\n\x12QUERY_IS_INCORRECT\x10\x04\"q\n\x0etype_of_graphs\"_\n\rtype_of_graph\x12\t\n\x05GRAPH\x10\x00\x12\x07\n\x03\x44\x41G\x10\x01\x12\x0c\n\x08\x44IRECTED\x10\x02\x12\x08\n\x04GRID\x10\x03\x12\x08\n\x04TREE\x10\x04\x12\x08\n\x04TRIE\x10\x05\x12\x0e\n\nUNDIRECTED\x10\x06\"\x1f\n\x0flist_of_integer\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\r\"9\n\x17list_of_list_of_integer\x12\x1e\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x10.list_of_integer2\xca\x01\n\nToyGraphDB\x12\x37\n\nread_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x12\x39\n\x0c\x63reate_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x12H\n\x1b\x63\x61ll_functionality_in_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse\"\x00\x62\x06proto3'
 )
 
 
+
+_ERROR_CODE = _descriptor.EnumDescriptor(
+  name='code',
+  full_name='Error.code',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='FAILED', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=573,
+  serialized_end=591,
+)
+_sym_db.RegisterEnumDescriptor(_ERROR_CODE)
+
+_SUCCESS_CODE = _descriptor.EnumDescriptor(
+  name='code',
+  full_name='Success.code',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='ALL_GOOD', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=657,
+  serialized_end=677,
+)
+_sym_db.RegisterEnumDescriptor(_SUCCESS_CODE)
 
 _STATUS_STATUS = _descriptor.EnumDescriptor(
   name='status',
@@ -59,8 +99,8 @@ _STATUS_STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=605,
-  serialized_end=721,
+  serialized_start=689,
+  serialized_end=805,
 )
 _sym_db.RegisterEnumDescriptor(_STATUS_STATUS)
 
@@ -109,8 +149,8 @@ _TYPE_OF_GRAPHS_TYPE_OF_GRAPH = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=741,
-  serialized_end=836,
+  serialized_start=825,
+  serialized_end=920,
 )
 _sym_db.RegisterEnumDescriptor(_TYPE_OF_GRAPHS_TYPE_OF_GRAPH)
 
@@ -454,9 +494,9 @@ _ERROR = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='code', full_name='Error.code', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      name='code_number', full_name='Error.code_number', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -472,6 +512,7 @@ _ERROR = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
+    _ERROR_CODE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -480,7 +521,7 @@ _ERROR = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=513,
-  serialized_end=551,
+  serialized_end=591,
 )
 
 
@@ -493,9 +534,9 @@ _SUCCESS = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='code', full_name='Success.code', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      name='code_number', full_name='Success.code_number', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -511,6 +552,7 @@ _SUCCESS = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
+    _SUCCESS_CODE,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -518,8 +560,8 @@ _SUCCESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=553,
-  serialized_end=593,
+  serialized_start=593,
+  serialized_end=677,
 )
 
 
@@ -544,8 +586,8 @@ _STATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=595,
-  serialized_end=721,
+  serialized_start=679,
+  serialized_end=805,
 )
 
 
@@ -570,8 +612,8 @@ _TYPE_OF_GRAPHS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=723,
-  serialized_end=836,
+  serialized_start=807,
+  serialized_end=920,
 )
 
 
@@ -602,8 +644,8 @@ _LIST_OF_INTEGER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=838,
-  serialized_end=869,
+  serialized_start=922,
+  serialized_end=953,
 )
 
 
@@ -634,8 +676,8 @@ _LIST_OF_LIST_OF_INTEGER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=871,
-  serialized_end=928,
+  serialized_start=955,
+  serialized_end=1012,
 )
 
 _TOYGRAPHDBREQUEST.fields_by_name['type'].message_type = _TYPE_OF_GRAPHS
@@ -650,6 +692,10 @@ _GRID.fields_by_name['data'].message_type = _LIST_OF_LIST_OF_INTEGER
 _TOYGRAPHDBRESPONSE.fields_by_name['status'].message_type = _STATUS
 _TOYGRAPHDBRESPONSE.fields_by_name['error_message'].message_type = _ERROR
 _TOYGRAPHDBRESPONSE.fields_by_name['success_message'].message_type = _SUCCESS
+_ERROR.fields_by_name['code_number'].enum_type = _ERROR_CODE
+_ERROR_CODE.containing_type = _ERROR
+_SUCCESS.fields_by_name['code_number'].enum_type = _SUCCESS_CODE
+_SUCCESS_CODE.containing_type = _SUCCESS
 _STATUS_STATUS.containing_type = _STATUS
 _TYPE_OF_GRAPHS_TYPE_OF_GRAPH.containing_type = _TYPE_OF_GRAPHS
 _LIST_OF_LIST_OF_INTEGER.fields_by_name['data'].message_type = _LIST_OF_INTEGER
@@ -784,8 +830,8 @@ _TOYGRAPHDB = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=931,
-  serialized_end=1133,
+  serialized_start=1015,
+  serialized_end=1217,
   methods=[
   _descriptor.MethodDescriptor(
     name='read_graph',
