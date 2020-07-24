@@ -18,7 +18,7 @@ stub = query_servicer_pb2_grpc.ToyGraphDBStub(channel)
 # print(request_list)
 # request_data.data
 # create a valid request message
-grid = query_servicer_pb2.list_of_list_of_integer(data=None)
+grid = query_servicer_pb2.List_of_list_of_integer(data=None)
 
 print(grid)
 # make the call
