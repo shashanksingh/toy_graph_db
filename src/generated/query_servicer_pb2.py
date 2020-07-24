@@ -18,7 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
     syntax="proto3",
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
-    serialized_pb=b'\n\x14query_servicer.proto"\x8b\x02\n\x11ToyGraphDBRequest\x12\x1d\n\x04type\x18\x01 \x01(\x0b\x32\x0f.type_of_graphs\x12\x11\n\x03\x64\x61g\x18\x02 \x01(\x0b\x32\x04.dag\x12\x1b\n\x08\x64irected\x18\x03 \x01(\x0b\x32\t.directed\x12\x15\n\x05graph\x18\x04 \x01(\x0b\x32\x06.graph\x12\x13\n\x04grid\x18\x05 \x01(\x0b\x32\x05.grid\x12\x13\n\x04tree\x18\x06 \x01(\x0b\x32\x05.tree\x12\x13\n\x04trie\x18\x07 \x01(\x0b\x32\x05.trie\x12\x1f\n\nundirected\x18\x08 \x01(\x0b\x32\x0b.undirected\x12\x0f\n\x07message\x18\t \x01(\t\x12\x10\n\x08\x64\x61tabase\x18\n \x01(\t\x12\r\n\x05table\x18\x0b \x01(\t"\x05\n\x03\x64\x61g"\n\n\x08\x64irected"\x07\n\x05graph".\n\x04grid\x12&\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x18.list_of_list_of_integer"\x06\n\x04tree"\x06\n\x04trie"\x0c\n\nundirected"o\n\x12ToyGraphDBResponse\x12\x17\n\x06status\x18\x01 \x01(\x0b\x32\x07.status\x12\x1d\n\rerror_message\x18\x02 \x01(\x0b\x32\x06.Error\x12!\n\x0fsuccess_message\x18\x03 \x01(\x0b\x32\x08.Success"N\n\x05\x45rror\x12 \n\x0b\x63ode_number\x18\x01 \x01(\x0e\x32\x0b.Error.code\x12\x0f\n\x07message\x18\x02 \x01(\t"\x12\n\x04\x63ode\x12\n\n\x06\x46\x41ILED\x10\x00"T\n\x07Success\x12"\n\x0b\x63ode_number\x18\x01 \x01(\x0e\x32\r.Success.code\x12\x0f\n\x07message\x18\x02 \x01(\t"\x14\n\x04\x63ode\x12\x0c\n\x08\x41LL_GOOD\x10\x00"~\n\x06status"t\n\x06status\x12\x0c\n\x08\x41LL_GOOD\x10\x00\x12\x16\n\x12\x45VERYTHING_IS_FINE\x10\x01\x12\x12\n\x0e\x43OOL_YOUR_JETS\x10\x02\x12\x18\n\x14SOMETHING_WENT_WRONG\x10\x03\x12\x16\n\x12QUERY_IS_INCORRECT\x10\x04"q\n\x0etype_of_graphs"_\n\rtype_of_graph\x12\t\n\x05GRAPH\x10\x00\x12\x07\n\x03\x44\x41G\x10\x01\x12\x0c\n\x08\x44IRECTED\x10\x02\x12\x08\n\x04GRID\x10\x03\x12\x08\n\x04TREE\x10\x04\x12\x08\n\x04TRIE\x10\x05\x12\x0e\n\nUNDIRECTED\x10\x06"\x1f\n\x0flist_of_integer\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\r"9\n\x17list_of_list_of_integer\x12\x1e\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x10.list_of_integer2\xca\x01\n\nToyGraphDB\x12\x37\n\nread_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x12\x39\n\x0c\x63reate_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x12H\n\x1b\x63\x61ll_functionality_in_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x62\x06proto3',
+    serialized_pb=b'\n\x14query_servicer.proto"\x07\n\x05\x45mpty"\x17\n\x04Pong\x12\x0f\n\x07message\x18\x01 \x01(\t"\x8b\x02\n\x11ToyGraphDBRequest\x12\x1d\n\x04type\x18\x01 \x01(\x0b\x32\x0f.type_of_graphs\x12\x11\n\x03\x64\x61g\x18\x02 \x01(\x0b\x32\x04.dag\x12\x1b\n\x08\x64irected\x18\x03 \x01(\x0b\x32\t.directed\x12\x15\n\x05graph\x18\x04 \x01(\x0b\x32\x06.graph\x12\x13\n\x04grid\x18\x05 \x01(\x0b\x32\x05.grid\x12\x13\n\x04tree\x18\x06 \x01(\x0b\x32\x05.tree\x12\x13\n\x04trie\x18\x07 \x01(\x0b\x32\x05.trie\x12\x1f\n\nundirected\x18\x08 \x01(\x0b\x32\x0b.undirected\x12\x0f\n\x07message\x18\t \x01(\t\x12\x10\n\x08\x64\x61tabase\x18\n \x01(\t\x12\r\n\x05table\x18\x0b \x01(\t"\x05\n\x03\x64\x61g"\n\n\x08\x64irected"\x07\n\x05graph".\n\x04grid\x12&\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x18.list_of_list_of_integer"\x06\n\x04tree"\x06\n\x04trie"\x0c\n\nundirected"o\n\x12ToyGraphDBResponse\x12\x17\n\x06status\x18\x01 \x01(\x0b\x32\x07.status\x12\x1d\n\rerror_message\x18\x02 \x01(\x0b\x32\x06.Error\x12!\n\x0fsuccess_message\x18\x03 \x01(\x0b\x32\x08.Success"N\n\x05\x45rror\x12 \n\x0b\x63ode_number\x18\x01 \x01(\x0e\x32\x0b.Error.code\x12\x0f\n\x07message\x18\x02 \x01(\t"\x12\n\x04\x63ode\x12\n\n\x06\x46\x41ILED\x10\x00"T\n\x07Success\x12"\n\x0b\x63ode_number\x18\x01 \x01(\x0e\x32\r.Success.code\x12\x0f\n\x07message\x18\x02 \x01(\t"\x14\n\x04\x63ode\x12\x0c\n\x08\x41LL_GOOD\x10\x00"~\n\x06status"t\n\x06status\x12\x0c\n\x08\x41LL_GOOD\x10\x00\x12\x16\n\x12\x45VERYTHING_IS_FINE\x10\x01\x12\x12\n\x0e\x43OOL_YOUR_JETS\x10\x02\x12\x18\n\x14SOMETHING_WENT_WRONG\x10\x03\x12\x16\n\x12QUERY_IS_INCORRECT\x10\x04"q\n\x0etype_of_graphs"_\n\rtype_of_graph\x12\t\n\x05GRAPH\x10\x00\x12\x07\n\x03\x44\x41G\x10\x01\x12\x0c\n\x08\x44IRECTED\x10\x02\x12\x08\n\x04GRID\x10\x03\x12\x08\n\x04TREE\x10\x04\x12\x08\n\x04TRIE\x10\x05\x12\x0e\n\nUNDIRECTED\x10\x06"\x1f\n\x0flist_of_integer\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\r"9\n\x17list_of_list_of_integer\x12\x1e\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x10.list_of_integer2\xe3\x01\n\nToyGraphDB\x12\x17\n\x04ping\x12\x06.Empty\x1a\x05.Pong"\x00\x12\x37\n\nread_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x12\x39\n\x0c\x63reate_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x12H\n\x1b\x63\x61ll_functionality_in_graph\x12\x12.ToyGraphDBRequest\x1a\x13.ToyGraphDBResponse"\x00\x62\x06proto3',
 )
 
 
@@ -40,8 +40,8 @@ _ERROR_CODE = _descriptor.EnumDescriptor(
     ],
     containing_type=None,
     serialized_options=None,
-    serialized_start=573,
-    serialized_end=591,
+    serialized_start=607,
+    serialized_end=625,
 )
 _sym_db.RegisterEnumDescriptor(_ERROR_CODE)
 
@@ -63,8 +63,8 @@ _SUCCESS_CODE = _descriptor.EnumDescriptor(
     ],
     containing_type=None,
     serialized_options=None,
-    serialized_start=657,
-    serialized_end=677,
+    serialized_start=691,
+    serialized_end=711,
 )
 _sym_db.RegisterEnumDescriptor(_SUCCESS_CODE)
 
@@ -118,8 +118,8 @@ _STATUS_STATUS = _descriptor.EnumDescriptor(
     ],
     containing_type=None,
     serialized_options=None,
-    serialized_start=689,
-    serialized_end=805,
+    serialized_start=723,
+    serialized_end=839,
 )
 _sym_db.RegisterEnumDescriptor(_STATUS_STATUS)
 
@@ -189,10 +189,72 @@ _TYPE_OF_GRAPHS_TYPE_OF_GRAPH = _descriptor.EnumDescriptor(
     ],
     containing_type=None,
     serialized_options=None,
-    serialized_start=825,
-    serialized_end=920,
+    serialized_start=859,
+    serialized_end=954,
 )
 _sym_db.RegisterEnumDescriptor(_TYPE_OF_GRAPHS_TYPE_OF_GRAPH)
+
+
+_EMPTY = _descriptor.Descriptor(
+    name="Empty",
+    full_name="Empty",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=24,
+    serialized_end=31,
+)
+
+
+_PONG = _descriptor.Descriptor(
+    name="Pong",
+    full_name="Pong",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="message",
+            full_name="Pong.message",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=33,
+    serialized_end=56,
+)
 
 
 _TOYGRAPHDBREQUEST = _descriptor.Descriptor(
@@ -421,8 +483,8 @@ _TOYGRAPHDBREQUEST = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=25,
-    serialized_end=292,
+    serialized_start=59,
+    serialized_end=326,
 )
 
 
@@ -442,8 +504,8 @@ _DAG = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=77,
-    serialized_end=82,
+    serialized_start=111,
+    serialized_end=116,
 )
 
 
@@ -463,8 +525,8 @@ _DIRECTED = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=96,
-    serialized_end=106,
+    serialized_start=130,
+    serialized_end=140,
 )
 
 
@@ -484,8 +546,8 @@ _GRAPH = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=125,
-    serialized_end=132,
+    serialized_start=159,
+    serialized_end=166,
 )
 
 
@@ -525,8 +587,8 @@ _GRID = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=322,
-    serialized_end=368,
+    serialized_start=356,
+    serialized_end=402,
 )
 
 
@@ -546,8 +608,8 @@ _TREE = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=169,
-    serialized_end=175,
+    serialized_start=203,
+    serialized_end=209,
 )
 
 
@@ -567,8 +629,8 @@ _TRIE = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=190,
-    serialized_end=196,
+    serialized_start=224,
+    serialized_end=230,
 )
 
 
@@ -588,8 +650,8 @@ _UNDIRECTED = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=211,
-    serialized_end=223,
+    serialized_start=245,
+    serialized_end=257,
 )
 
 
@@ -667,8 +729,8 @@ _TOYGRAPHDBRESPONSE = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=400,
-    serialized_end=511,
+    serialized_start=434,
+    serialized_end=545,
 )
 
 
@@ -727,8 +789,8 @@ _ERROR = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=513,
-    serialized_end=591,
+    serialized_start=547,
+    serialized_end=625,
 )
 
 
@@ -787,8 +849,8 @@ _SUCCESS = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=593,
-    serialized_end=677,
+    serialized_start=627,
+    serialized_end=711,
 )
 
 
@@ -808,8 +870,8 @@ _STATUS = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=679,
-    serialized_end=805,
+    serialized_start=713,
+    serialized_end=839,
 )
 
 
@@ -829,8 +891,8 @@ _TYPE_OF_GRAPHS = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=807,
-    serialized_end=920,
+    serialized_start=841,
+    serialized_end=954,
 )
 
 
@@ -870,8 +932,8 @@ _LIST_OF_INTEGER = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=922,
-    serialized_end=953,
+    serialized_start=956,
+    serialized_end=987,
 )
 
 
@@ -911,8 +973,8 @@ _LIST_OF_LIST_OF_INTEGER = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=955,
-    serialized_end=1012,
+    serialized_start=989,
+    serialized_end=1046,
 )
 
 _TOYGRAPHDBREQUEST.fields_by_name["type"].message_type = _TYPE_OF_GRAPHS
@@ -934,6 +996,8 @@ _SUCCESS_CODE.containing_type = _SUCCESS
 _STATUS_STATUS.containing_type = _STATUS
 _TYPE_OF_GRAPHS_TYPE_OF_GRAPH.containing_type = _TYPE_OF_GRAPHS
 _LIST_OF_LIST_OF_INTEGER.fields_by_name["data"].message_type = _LIST_OF_INTEGER
+DESCRIPTOR.message_types_by_name["Empty"] = _EMPTY
+DESCRIPTOR.message_types_by_name["Pong"] = _PONG
 DESCRIPTOR.message_types_by_name["ToyGraphDBRequest"] = _TOYGRAPHDBREQUEST
 DESCRIPTOR.message_types_by_name["dag"] = _DAG
 DESCRIPTOR.message_types_by_name["directed"] = _DIRECTED
@@ -950,6 +1014,28 @@ DESCRIPTOR.message_types_by_name["type_of_graphs"] = _TYPE_OF_GRAPHS
 DESCRIPTOR.message_types_by_name["list_of_integer"] = _LIST_OF_INTEGER
 DESCRIPTOR.message_types_by_name["list_of_list_of_integer"] = _LIST_OF_LIST_OF_INTEGER
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+Empty = _reflection.GeneratedProtocolMessageType(
+    "Empty",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _EMPTY,
+        "__module__": "query_servicer_pb2"
+        # @@protoc_insertion_point(class_scope:Empty)
+    },
+)
+_sym_db.RegisterMessage(Empty)
+
+Pong = _reflection.GeneratedProtocolMessageType(
+    "Pong",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _PONG,
+        "__module__": "query_servicer_pb2"
+        # @@protoc_insertion_point(class_scope:Pong)
+    },
+)
+_sym_db.RegisterMessage(Pong)
 
 ToyGraphDBRequest = _reflection.GeneratedProtocolMessageType(
     "ToyGraphDBRequest",
@@ -1124,13 +1210,23 @@ _TOYGRAPHDB = _descriptor.ServiceDescriptor(
     index=0,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
-    serialized_start=1015,
-    serialized_end=1217,
+    serialized_start=1049,
+    serialized_end=1276,
     methods=[
+        _descriptor.MethodDescriptor(
+            name="ping",
+            full_name="ToyGraphDB.ping",
+            index=0,
+            containing_service=None,
+            input_type=_EMPTY,
+            output_type=_PONG,
+            serialized_options=None,
+            create_key=_descriptor._internal_create_key,
+        ),
         _descriptor.MethodDescriptor(
             name="read_graph",
             full_name="ToyGraphDB.read_graph",
-            index=0,
+            index=1,
             containing_service=None,
             input_type=_TOYGRAPHDBREQUEST,
             output_type=_TOYGRAPHDBRESPONSE,
@@ -1140,7 +1236,7 @@ _TOYGRAPHDB = _descriptor.ServiceDescriptor(
         _descriptor.MethodDescriptor(
             name="create_graph",
             full_name="ToyGraphDB.create_graph",
-            index=1,
+            index=2,
             containing_service=None,
             input_type=_TOYGRAPHDBREQUEST,
             output_type=_TOYGRAPHDBRESPONSE,
@@ -1150,7 +1246,7 @@ _TOYGRAPHDB = _descriptor.ServiceDescriptor(
         _descriptor.MethodDescriptor(
             name="call_functionality_in_graph",
             full_name="ToyGraphDB.call_functionality_in_graph",
-            index=2,
+            index=3,
             containing_service=None,
             input_type=_TOYGRAPHDBREQUEST,
             output_type=_TOYGRAPHDBRESPONSE,
