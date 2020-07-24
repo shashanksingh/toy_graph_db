@@ -27,10 +27,10 @@ clean:
 	rm -rf dist/ build/  || true
 
 run_server:
-	python main.py
+	python -m main
 
 run_client:
-	python clients/examples/create_grid.py
+	python -m clients.examples.create_grid
 
 .PHONY: freeze clean
 .SILENT: src_package
