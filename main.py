@@ -8,6 +8,9 @@ from src.grid import Grid
 from src.graph import Graph
 from src.tree import Tree
 
+#for fun
+import emoji
+
 # imports for the server
 import grpc
 from src.generated.query_servicer_pb2_grpc import (
@@ -60,5 +63,5 @@ def serve():
 
 if __name__ == "__main__":
     logging.basicConfig()
-    print(f"Running on port {PORT_EXPOSED}")
+    print(f"Running on port {PORT_EXPOSED} :thumbs_up:")
     serve()
