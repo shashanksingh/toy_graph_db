@@ -38,7 +38,7 @@ class ToyGraphDBServicerProxy(ToyGraphDBServicer):
     def create_graph(self, request, context):
         type_of_graph = request.type
         response = None
-        print(request, context)
+        print(request.grid.data)
         try:
             # can be better
             graph = (
@@ -67,9 +67,7 @@ class ToyGraphDBServicerProxy(ToyGraphDBServicer):
 
         except ValueError as e:
             response = ToyGraphDBResponse(
-                status=None,
-                error_message=None,
-                success_message=None,
+                status=None, error_message=None, success_message=None,
             )
         return response
 
