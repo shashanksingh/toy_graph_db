@@ -25,7 +25,7 @@ from concurrent import futures
 PORT_EXPOSED = 9090
 
 
-class ToyGraphDBServicer(ToyGraphDBServicer):
+class ToyGraphDBServicerProxy(ToyGraphDBServicer):
     def __init__(self):
         pass
 
@@ -55,7 +55,7 @@ class ToyGraphDBServicer(ToyGraphDBServicer):
 
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-    add_ToyGraphDBServicer_to_server(ToyGraphDBServicer(), server)
+    add_ToyGraphDBServicer_to_server(ToyGraphDBServicerProxy(), server)
     server.add_insecure_port(f"[::]:{PORT_EXPOSED}")
     print(emoji.emojize(f"All systems go :rocket:"))
     server.start()
