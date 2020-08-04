@@ -27,9 +27,11 @@ print(response)
 
 # https://www.freecodecamp.org/news/googles-protocol-buffers-in-python/
 # convert sample grid to data
-list_of_integer = [[]]
-for row in SAMPLE_GRID:
-    list_of_integer.extend(row)
+
+list_of_integer = List_of_integer()
+first_item = list_of_integer.add()
+first_item.data.append([1,2,3])
+
 grid_data = List_of_list_of_integer(data=list_of_integer)
 grid_request_object = grid(data=grid_data)
 
