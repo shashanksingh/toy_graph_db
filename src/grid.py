@@ -19,7 +19,7 @@ class Grid(Graph):
         super()
 
     def __hash__(self):
-        return md5((self.get_class_name() + "").encode("utf-8")).hexdigest()
+        return hash(str(self.grid))
 
     def clear_visited(self):
         self.visited = set()
