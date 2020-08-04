@@ -18,7 +18,7 @@ test:
 	pytest -sv tests/
 
 black:
-	black --target-version py38 src/ tests/ main.py
+	black --target-version py38 src/ tests/ clients/ main.py
 
 fix:
 	black -l 120 src/ tests/
@@ -26,8 +26,11 @@ fix:
 clean:
 	rm -rf dist/ build/  || true
 
-run:
-	python main.py
+run_server:
+	python -m main
+
+run_client:
+	python -m clients.examples.create_grid
 
 .PHONY: freeze clean
 .SILENT: src_package

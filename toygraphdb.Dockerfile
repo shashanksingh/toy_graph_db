@@ -9,5 +9,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "./main.py" ]
-EXPOSE 8080
+CMD [ "make", "run_server" ]
+EXPOSE 9090

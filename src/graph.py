@@ -1,10 +1,10 @@
 from .persistentdictsingleton import PersistentDictSingleton
-from abc import ABC
+from abc import ABCMeta, abstractmethod
 
 DATABASE_NAME = "GRAPH"
 
 
-class Graph:
+class Graph(metaclass=ABCMeta):
 
     # constructor
     def __init__(self):
@@ -14,6 +14,10 @@ class Graph:
     # def __del__(self):
     #     storage = PersistentDictSingleton()
     #     storage.close()
+
+    @abstractmethod
+    def __hash__(self):
+        pass
 
     def __str__(self) -> str:
         return f"{self.get_class_name()} : {self.__hash__()}"
@@ -45,3 +49,7 @@ class Graph:
     @classmethod
     def get_class_name(cls) -> str:
         return cls.__name__
+
+    @staticmethod
+    def whoami():
+        return "graph"

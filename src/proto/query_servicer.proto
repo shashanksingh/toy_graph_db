@@ -2,6 +2,8 @@ syntax = "proto3";
 
 service ToyGraphDB {
 
+  rpc ping (Empty) returns (Pong) {} // Obtains the graph in question
+
   rpc read_graph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // Obtains the graph in question
 
   rpc create_graph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // create a graph based on params
@@ -9,8 +11,16 @@ service ToyGraphDB {
   rpc call_functionality_in_graph (ToyGraphDBRequest) returns (ToyGraphDBResponse) {} // Calls functions on the graph in question
 }
 
+
+message Empty{}
+
+
+message Pong {
+  string message = 1;
+}
+
 message ToyGraphDBRequest {
-  string type = 1;
+  Type_of_graphs type  = 1;
   dag dag = 2;
   directed directed = 3;
   graph graph = 4;
@@ -23,34 +33,64 @@ message ToyGraphDBRequest {
   string table = 11;
 }
 
+//toy graph db graph primites
 message dag {}
 message directed {}
 message graph {}
-message grid {}
+message grid {
+  List_of_list_of_integer data=1;
+}
 message tree {}
 message trie {}
 message undirected {}
 
-// The response message containing the greetings
+// The response message containing the graph data
 message ToyGraphDBResponse {
-  status status = 2;
-  Error error_message = 3;
-  Success success_message = 4;
+  Status status = 1;
+  Error error_message = 2;
+  Success success_message = 3;
 }
 
 message Error {
-  string code = 3;
-  string message = 4;
+  enum Code {
+    FAILED= 0;
+  }
+  Code code_number = 1;
+  string message = 2;
 }
 
 message Success {
-  string code = 3;
-  string message = 4;
+  enum Code {
+    ALL_GOOD= 0;
+  }
+  Code code_number = 1;
+  string message = 2;
 }
 
-message status {
-    enum status {
-        ALL_GOOD=0;
-        EVERYTHING_IS_FINE=1;
-    }
+//enums
+enum Status {
+    ALL_GOOD=0;
+    EVERYTHING_IS_FINE=1;
+    COOL_YOUR_JETS=2;
+    SOMETHING_WENT_WRONG=3;
+    QUERY_IS_INCORRECT=4;
+}
+
+enum Type_of_graphs {
+    GRAPH = 0;
+    DAG = 1;
+    DIRECTED = 2;
+    GRID = 3;
+    TREE = 4;
+    TRIE = 5;
+    UNDIRECTED = 6;
+    INVALID = 7;
+}
+
+//input types for graph db primitives
+message List_of_integer {
+  repeated uint32 data=1;
+}
+message List_of_list_of_integer {
+  repeated List_of_integer data=1;
 }

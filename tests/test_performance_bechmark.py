@@ -9,7 +9,6 @@ def save_all_graphs_into_storage():
     a = Undirected(2, [[0, 1]])
     b = Dag(2, [[0, 1]])
     c = Grid([[1, 0, 1]])
-    d = Graph()
     e = Tree(2, [[0, 1]])
 
     a.save_into_storage()
