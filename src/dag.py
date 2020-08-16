@@ -21,6 +21,7 @@ class Dag(Directed):
             str(self.adjacency_list) + str(self.edge_list) + str(self.number_of_nodes)
         )
 
+
     def add_edge(self, from_edge: int, to_edge: int):
         self.adjacency_list[from_edge].append(to_edge)
 

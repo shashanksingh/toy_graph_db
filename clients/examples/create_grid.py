@@ -34,6 +34,7 @@ for row in SAMPLE_GRID:
     List_of_list_of_integer_data.data.CopyFrom(temp_data)
 grid_request_object = grid(data=List_of_list_of_integer_data)
 
+
 request = ToyGraphDBRequest(
     type=Type_of_graphs.GRID,
     grid=grid_request_object,
