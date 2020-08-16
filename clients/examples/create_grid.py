@@ -21,19 +21,18 @@ channel = grpc.insecure_channel(f"localhost:{PORT_EXPOSED}")
 stub = query_servicer_pb2_grpc.ToyGraphDBStub(channel)
 
 
-# make the call
-response = stub.ping(Empty())
-print(response)
+# # make the call
+# response = stub.ping(Empty())
+# print(response)
 
 # https://www.freecodecamp.org/news/googles-protocol-buffers-in-python/
 # convert sample grid to data
 
-list_of_integer = List_of_integer()
-first_item = list_of_integer.add()
-first_item.data.append([1,2,3])
-
-grid_data = List_of_list_of_integer(data=list_of_integer)
-grid_request_object = grid(data=grid_data)
+List_of_list_of_integer_data = List_of_list_of_integer()
+for row in SAMPLE_GRID:
+    temp_data = List_of_integer(data=row)
+    List_of_list_of_integer_data.data.CopyFrom(temp_data)
+grid_request_object = grid(data=List_of_list_of_integer_data)
 
 request = ToyGraphDBRequest(
     type=Type_of_graphs.GRID,

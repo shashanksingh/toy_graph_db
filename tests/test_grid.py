@@ -33,3 +33,9 @@ class TestGrid(TestCase):
         a.clear_visited()
         a.bfs(0, 0)
         assert a.visited == {(0, 1), (1, 2), (0, 0), (1, 1), (1, 0), (0, 2)}
+
+    def test_bellman_ford(self):
+        assert False
+
+    def test_find_arbitrage_possibilities(self):
+        assert False

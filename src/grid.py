@@ -83,3 +83,16 @@ class Grid(Graph):
                     ):
                         self.visited.add((new_row, new_column))
                         queue.append((new_row, new_column, new_level))
+
+    def bellman_ford(self):
+        pass
+
+    def find_negative_cycle(self):
+        return self.bellman_ford()
+
+    # https://reasonabledeviations.com/2019/03/02/currency-arbitrage-graphs/
+    def find_arbitrage_possibilities(self):
+        # preprocess the graph
+        # find_negative sum_cycles
+
+        return self.bellman_ford()
