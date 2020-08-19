@@ -20,7 +20,6 @@ class Undirected(Graph):
             str(self.adjacency_list) + str(self.edge_list) + str(self.number_of_nodes)
         )
 
-
     def setup_adjacency(self):
         self.adjacency_list = {x: [] for x in range(self.number_of_nodes)}
         for from_edge, to_edge in self.edge_list:
