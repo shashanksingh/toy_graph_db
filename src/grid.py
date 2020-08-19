@@ -84,7 +84,7 @@ class Grid(Graph):
                         self.visited.add((new_row, new_column))
                         queue.append((new_row, new_column, new_level))
 
-    def bellman_ford(self):
+    def bellman_ford(self, source_row=0, source_column=0):
         pass
 
     def find_negative_cycle(self):
