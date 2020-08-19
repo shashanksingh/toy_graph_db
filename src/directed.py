@@ -2,6 +2,7 @@ from src.graph import Graph
 from typing import List, Set
 from collections import defaultdict
 
+
 class Directed(Graph):
     def __init__(self, edges: List[List[int]]):
         self.graph = defaultdict(set)  # no duplicates
