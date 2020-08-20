@@ -33,3 +33,11 @@ class TestGrid(TestCase):
         a.clear_visited()
         a.bfs(0, 0)
         assert a.visited == {(0, 1), (1, 2), (0, 0), (1, 1), (1, 0), (0, 2)}
+
+    def test_bellman_ford(self):
+        a = Grid([[1, 1, 1], [1, 0, 0], [1, 1, 0]])
+        assert a.bellman_ford(source_row=0, source_column=0)
+
+    def test_find_arbitrage_possibilities(self):
+        a = Grid([[0, 0.80], [1.30, 0]])  # 0.80*1.30 = 1.04
+        assert False
